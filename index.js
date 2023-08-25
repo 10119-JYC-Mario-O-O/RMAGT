@@ -1,0 +1,1 @@
+let w = false, a = false, s = false, d = false, j = false, k = false, m = false, mouseClick = false;
