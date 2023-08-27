@@ -9,17 +9,16 @@ let ctx = canvas.getContext(`2d`);
 
 let w = false, a = false, s = false, d = false, j = false, k = false, m = false, mouseClick = false;
 
+function loadPlayerImage() {
+    Test = new Image();
+    Test.src = 'Test.png'
+}
+
 let keysDown = {};
 function setKeyboardListener() {
     document.addEventListener('keydown', function (event) {
-        keysDown[event.keyCode] = true;
-
         if (event.keyCode == 87) {
         
-        }
-        if (event.keyCode == 83) {
-            // PlayerY += 64;
-            isCarrying = !isCarrying;
         }
     });
     document.addEventListener('keyup', function (event) {
@@ -35,3 +34,5 @@ function setKeyboardListener() {
         }
     });
 }
+
+ctx.drawImage(Test, 1, 1, 1, 1, 10, 10, 128, 128);
