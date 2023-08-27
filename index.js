@@ -22,15 +22,8 @@ function setKeyboardListener() {
         }
     });
     document.addEventListener('keyup', function (event) {
-        delete keysDown[event.keyCode];
-        
         if (event.keyCode == 87) {
-            // PlayerY -= 64;
-            isYoshi = !isYoshi;
-        }
-        if (event.keyCode == 83) {
-            // PlayerY += 64;
-            isCarrying = !isCarrying;
+            
         }
     });
 }
