@@ -28,4 +28,4 @@ function setKeyboardListener() {
     });
 }
 
-ctx.drawImage(Test, 1, 1, 1, 1, 10, 10, 128, 128);
+ctx.drawImage(Test, 0, 0, 8, 8, 10, 10, 128, 128);
