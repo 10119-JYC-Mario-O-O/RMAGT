@@ -35,4 +35,4 @@ function main () {
     requestAnimationFrame(main);
 }
 
-main();ts
+main();
