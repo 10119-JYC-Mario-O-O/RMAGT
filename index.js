@@ -5,16 +5,15 @@ document.body.appendChild(canvas);
 canvas.width = 2545;
 canvas.height = 1425;
 
-let ctx = canvas.getContext(`2d`);
+const ctx = canvas.getContext(`2d`);
 
 let w = false, a = false, s = false, d = false, j = false, k = false, m = false, mouseClick = false;
 
 function loadPlayerImage() {
     Test = new Image();
-    Test.src = 'Test.png'
+    Test.src = 'Test.png';
 }
 
-let keysDown = {};
 function setKeyboardListener() {
     document.addEventListener('keydown', function (event) {
         if (event.keyCode == 87) {
@@ -28,4 +27,12 @@ function setKeyboardListener() {
     });
 }
 
-ctx.drawImage(Test, 0, 0, 8, 8, 10, 10, 128, 128);
+loadPlayerImage();
+
+function main () {
+    ctx.drawImage(Test, 0, 0, 8, 8, 10, 10, 128, 128);
+
+    requestAnimationFrame(main);
+}
+
+main();
