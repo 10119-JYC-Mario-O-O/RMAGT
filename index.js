@@ -30,7 +30,7 @@ function setKeyboardListener() {
 loadPlayerImage();
 
 function main () {
-    ctx.drawImage(Test, 0, 0, 8, 8, 10, 10, 128, 128);
+    ctx.drawImage(Test, 0, 0, 2, 4, 10, 10, 8, 8);
 
     requestAnimationFrame(main);
 }
