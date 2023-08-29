@@ -2,37 +2,21 @@ canvas = document.createElement(`canvas`);
 
 document.body.appendChild(canvas);
 
-canvas.width = 2545;
-canvas.height = 1425;
+canvas.width = screen.availWidth;
+canvas.height = screen.availHeight;
 
 const ctx = canvas.getContext(`2d`);
 
-let w = false, a = false, s = false, d = false, j = false, k = false, m = false, mouseClick = false;
+let w = false, a = false, s = false, d = false, j = false, k = false, l = false, enterKey = false, mouseClick = false;
 
-function loadPlayerImage() {
-    Test = new Image();
-    Test.src = 'Test.png';
-}
+loadImage();
 
-function setKeyboardListener() {
-    document.addEventListener('keydown', function (event) {
-        if (event.keyCode == 87) {
-        
-        }
-    });
-    document.addEventListener('keyup', function (event) {
-        if (event.keyCode == 87) {
-            
-        }
-    });
-}
+loadEventListener();
 
-loadPlayerImage();
+main();
 
 function main () {
-    ctx.drawImage(Test, 0, 0, 2, 4, 10, 10, 8, 8);
+    ctx.drawImage(Test, 0, 0, 1024, 1024, 10, 10, 1024, 1024);
 
     requestAnimationFrame(main);
 }
-
-main();
