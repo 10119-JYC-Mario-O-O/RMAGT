@@ -39,9 +39,4 @@ function runCodeWithFPS () {
     setFPS();
 }
 
-/* <script src="load/loadValue.js"></script> */
-/* <script src="load/eventListener.js"></script> */
-/* <script src="load/loadImage.js"></script> */
-/* <script src="load/loadAudio.js"></script> */
-
         
