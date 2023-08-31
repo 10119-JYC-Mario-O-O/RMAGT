@@ -1,17 +1,8 @@
 document.write('<script src="Load/Value.js"></script>');
-
 document.write('<script src="Load/EventListener.js"></script>');
-loadEventListener();
-
 document.write('<script src="Load/Image.js"></script>');
-loadImage();
-
 document.write('<script src="Load/Audio.js"></script>');
-loadAudio();
-
 document.write('<script src="Load/runCode.js"></script>');
-
-runCodeWithFPS();
 
 function runCodeWithFPS () {
     let fps = 60;
@@ -39,4 +30,4 @@ function runCodeWithFPS () {
     setFPS();
 }
 
-        
+runCodeWithFPS();

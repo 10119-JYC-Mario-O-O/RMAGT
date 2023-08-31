@@ -68,6 +68,4 @@ function loadKeyboardListener() {
     });
 }
 
-function loadEventListener () {
-    loadKeyboardListener()
-}
+loadKeyboardListener();

@@ -3,6 +3,4 @@ function loadPlayerAudio () {
     // TestAudio.src = "Test.mp3";
 }
 
-function loadAudio () {
-    loadPlayerAudio();
-}
+loadPlayerAudio();
