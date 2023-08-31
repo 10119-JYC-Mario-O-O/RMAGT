@@ -1,9 +1,11 @@
-conter++;
+function runCode () {
+    conter++;
             
-if (conter >= 60) {
-    console.log(Date.now() - savedTime);
+    if (conter >= 60) {
+        console.log(Date.now() - savedTime);
 
-    savedTime = Date.now();
+        savedTime = Date.now();
 
-    conter = 0;
+        conter = 0;
+    }
 }
