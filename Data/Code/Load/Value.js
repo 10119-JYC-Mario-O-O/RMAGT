@@ -5,9 +5,13 @@ canvas.height = screen.height;              // \  Set Canvas
                                             //  |
 const ctx = canvas.getContext(`2d`);        // /
 
-const One_px_Size = 1440 / canvas.height;
+const Mult_Pixel_Size = canvas.width - (canvas.height / 1440) * 2560 >= 0 ?
+                     canvas.height / 1440 : canvas.width / 2560;
+                     // height is standard : width is standard
 
-const Start_Drawing_Position = (2560 - 2560 / One_px_Size) / 2;
+// SDP = Start Drawing Position
+const X_SDP = (canvas.width - Mult_Pixel_Size * 2560) / 2, 
+      Y_SDP = (canvas.height - Mult_Pixel_Size * 1440) / 2;
 
 let w = false, a = false, s = false, d = false, //  \
     j = false, k = false, l = false,            //  } Check Butten Inputs
