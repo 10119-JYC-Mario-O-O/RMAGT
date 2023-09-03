@@ -1,6 +1,6 @@
 function loadPlayerImage () {
     Test = new Image();
-    // Test.src = 'Test.png';
+    Test.src = 'Data/Image/Test.png';
 }
 
 loadPlayerImage();
