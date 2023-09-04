@@ -18,4 +18,9 @@ function Title_Screen () {
 
 function Fade_Out (x, y) {
     ctx.drawImage(Test, 0, 0, 2560, 1440, x + X_SDP, y + Y_SDP, Mult_Pixel_Size * 2560, Mult_Pixel_Size * 1440);
+    Debug();
+}
+
+function Debug () {
+    console.log("Debug");
 }
