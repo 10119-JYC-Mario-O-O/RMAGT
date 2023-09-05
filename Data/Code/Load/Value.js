@@ -24,3 +24,6 @@ let fps = 60, interval = 1000 / fps,                // /
 let Title_UI_Code_Num = 0;   // 0 = Fade Out, 1 = Fade In, 2 = Title etc
 
 let Seleted_Game_Theme = -1;    // -1 >= ERROR, 0 = Main, 1 = 3D etc
+
+let PlayerX = 0, PlayerY = 0, PlayerMoveX = 0, PlayerMoveY = 0;
+let NormalGravity = 6, JumpGravity = 3, PlayerGravity = 6;
