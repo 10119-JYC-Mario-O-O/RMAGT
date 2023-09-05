@@ -1,6 +1,4 @@
-document.write('<script src="Data/Code/Run/runCode.js"></script>');
-
-function runCodeWithFPS () {  
+function runCodeWithFPS () {      
     requestAnimationFrame(runCodeWithFPS);
     
     now = Date.now();

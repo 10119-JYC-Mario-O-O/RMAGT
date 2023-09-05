@@ -1,5 +1,3 @@
-document.write('<script src="Data/Code/Run/Game/Title_Screen.js"></script>');
-
 function runCode () {
     // conter++;
             
