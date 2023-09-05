@@ -1,6 +1,6 @@
 function Title_Screen () {
     if (Title_UI_Code_Num == 0) {
-        Fade_Out(0, PlayerY)//0);
+        Fade_Out(0, 0);
     } else if (Title_UI_Code_Num == 1) {
         Fade_In();
     } else if (Title_UI_Code_Num == 2) {
@@ -20,8 +20,18 @@ function Fade_Out (x, y) {
     ctx.drawImage(Test, 0, 0, 2560, 1440, x + X_SDP, y + Y_SDP, Mult_Pixel_Size * 2560, Mult_Pixel_Size * 1440);
 
     setPlayerGravity();
-    console.log(PlayerGravity);
     JumpInstruction();
+
+    if (PlayerY >= canvas.height - 64 * Mult_Pixel_Size) {
+        PlayerY = canvas.height - 64 * Mult_Pixel_Size;
+        PlayerMoveY = 0;
+
+        if (j) {
+            PlayerMoveY = -80;
+        }
+    }
+
+    ctx.drawImage(TestSpr, 0, 0, 1440, 1440, X_SDP, Y_SDP + PlayerY, Mult_Pixel_Size * 64, Mult_Pixel_Size * 64);
 }
 
 function Debug () {

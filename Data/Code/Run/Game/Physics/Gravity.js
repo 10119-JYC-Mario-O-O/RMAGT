@@ -13,5 +13,5 @@ function JumpInstruction () {
         PlayerMoveY += PlayerGravity;
     }
 
-    PlayerY += PlayerMoveY / 16;
+    PlayerY += PlayerMoveY / 16 * 8 * Mult_Pixel_Size;
 }
