@@ -68,4 +68,26 @@ function loadKeyboardListener() {
     });
 }
 
+function loadMouseListener () {
+    document.addEventListener(`mousemove`, (event) => {
+        mouseX = event.clientX;
+
+        mouseY = event.clientY;
+    });
+
+    document.addEventListener(`mousedown`, () => {
+        mouseClick = true;
+    });
+
+    document.addEventListener(`dblclick`, () => {
+        mouseDBClick = true;
+    });
+
+    document.addEventListener(`mouseup`, () => {
+        mouseClick = false;
+        mouseDBClick = false;
+    });
+}
+
 loadKeyboardListener();
+loadMouseListener();

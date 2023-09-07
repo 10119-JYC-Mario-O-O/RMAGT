@@ -17,23 +17,27 @@ function Title_Screen () {
 }
 
 function Fade_Out (x, y) {
-    ctx.drawImage(Test, 0, 0, 2560, 1440, x + X_SDP, y + Y_SDP, Mult_Pixel_Size * 2560, Mult_Pixel_Size * 1440);
+    ctx.drawImage(Test, 0, 0, 2560, 1440, x + X_SDP, y + Y_SDP, Mult_MPS(2560), Mult_MPS(1440));
 
-    setPlayerGravity();
     JumpInstruction();
 
-    if (PlayerY >= canvas.height - 64 * Mult_Pixel_Size) {
-        PlayerY = canvas.height - 64 * Mult_Pixel_Size;
-        PlayerMoveY = 0;
+    if (PlayerY >= canvas.height - PlayerHeight * Mult_Pixel_Size) {
+        PlayerY = canvas.height - PlayerHeight * Mult_Pixel_Size;
+        
+        isOnGround = true;
 
-        if (j) {
-            PlayerMoveY = -80;
+        if (!j) {
+            isHaveJumped = false;
         }
     }
 
-    ctx.drawImage(TestSpr, 0, 0, 1440, 1440, X_SDP, Y_SDP + PlayerY, Mult_Pixel_Size * 64, Mult_Pixel_Size * 64);
+    ctx.drawImage(TestSpr, 0, 0, 1440, 1440, X_SDP, Y_SDP + PlayerY, Mult_MPS(PlayerWidth), Mult_MPS(PlayerHeight));
 }
 
 function Debug () {
     console.log("Debug");
+}
+
+function Mult_MPS (num) {
+    return num * Mult_MPS
 }

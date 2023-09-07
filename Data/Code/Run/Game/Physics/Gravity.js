@@ -1,17 +1,20 @@
-// set PlayerMoveY as -80 before this instruction happens
-
-function setPlayerGravity () {
+function JumpInstruction () {
     if (j) {
         PlayerGravity = JumpGravity;
     } else {
         PlayerGravity = NormalGravity;
     }
-}
+    
+    if (j && !isHaveJumped) {
+        PlayerMoveY = -80;
 
-function JumpInstruction () {
+        isHaveJumped = true;
+        isOnGround = false;
+    }
+
     if (PlayerMoveY + PlayerGravity <= 70) {
         PlayerMoveY += PlayerGravity;
     }
-
+    
     PlayerY += PlayerMoveY / 16 * 8 * Mult_Pixel_Size;
 }
