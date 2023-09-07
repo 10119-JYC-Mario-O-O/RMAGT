@@ -12,9 +12,11 @@ function JumpInstruction () {
         isOnGround = false;
     }
 
-    if (PlayerMoveY + PlayerGravity <= 70) {
-        PlayerMoveY += PlayerGravity;
+    PlayerMoveY += PlayerGravity - Math.abs(PlayerMoveX);
+
+    if (PlayerMoveY >= 70) {
+        PlayerMoveY = 70;
     }
     
-    PlayerY += PlayerMoveY / 16 * 8 * Mult_Pixel_Size;
+    PlayerY += Mult_MPS(PlayerMoveY / 16 * 8);
 }

@@ -1,15 +1,15 @@
 canvas = document.getElementById(`canvas`); //  /
                                             //  |
-canvas.width = 1280//screen.width;                // /
+canvas.width = 720//screen.width;                // /
 canvas.height = screen.height;              // \  Set Canvas
                                             //  |
 const ctx = canvas.getContext(`2d`);        //  \
 
 const Mult_Pixel_Size = canvas.width - (canvas.height / 1440) * 2560 >= 0 ?
-                     canvas.height / 1440 : canvas.width / 2560;
-                    // height is standard : width is standard
+                        canvas.height / 1440 : canvas.width / 2560;
+                       // height is standard : width is standard
 
-// SDP = Start Drawing Position
+// SDP = Start Drawing Position = Gap
 const X_SDP = (canvas.width - Mult_Pixel_Size * 2560) / 2, 
       Y_SDP = (canvas.height - Mult_Pixel_Size * 1440) / 2;
 

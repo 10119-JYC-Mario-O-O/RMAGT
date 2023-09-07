@@ -21,8 +21,8 @@ function Fade_Out (x, y) {
 
     JumpInstruction();
 
-    if (PlayerY >= canvas.height - PlayerHeight * Mult_Pixel_Size) {
-        PlayerY = canvas.height - PlayerHeight * Mult_Pixel_Size;
+    if (PlayerY >= canvas.height -  Y_SDP - Mult_MPS(PlayerHeight)) {
+        PlayerY = canvas.height - Y_SDP - Mult_MPS(PlayerHeight);
         
         isOnGround = true;
 
@@ -39,5 +39,5 @@ function Debug () {
 }
 
 function Mult_MPS (num) {
-    return num * Mult_MPS
+    return num * Mult_Pixel_Size;
 }
