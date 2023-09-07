@@ -17,12 +17,12 @@ function Title_Screen () {
 }
 
 function Fade_Out (x, y) {
-    ctx.drawImage(Test, 0, 0, 2560, 1440, x + X_SDP, y + Y_SDP, Mult_MPS(2560), Mult_MPS(1440));
+    drawImage(Test, 0, 0, 2560, 1440, x, y, 2560, 1440);
 
     JumpInstruction();
 
-    if (PlayerY >= canvas.height -  Y_SDP - Mult_MPS(PlayerHeight)) {
-        PlayerY = canvas.height - Y_SDP - Mult_MPS(PlayerHeight);
+    if (PlayerY >= canvas.height - Mult_MPS(PlayerHeight)) {
+        PlayerY = canvas.height- Mult_MPS(PlayerHeight);
         
         isOnGround = true;
 
@@ -31,7 +31,7 @@ function Fade_Out (x, y) {
         }
     }
 
-    ctx.drawImage(TestSpr, 0, 0, 1440, 1440, X_SDP, Y_SDP + PlayerY, Mult_MPS(PlayerWidth), Mult_MPS(PlayerHeight));
+    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerX, PlayerY, PlayerWidth, PlayerHeight);
 }
 
 function Debug () {
@@ -40,4 +40,8 @@ function Debug () {
 
 function Mult_MPS (num) {
     return num * Mult_Pixel_Size;
+}
+
+function drawImage (img, ix, iy, iw, ih, cx, cy, cw, ch) {
+    ctx.drawImage(img, ix, iy, iw, ih, cx + X_SDP, cy + Y_SDP, Mult_MPS(cw), Mult_MPS(ch));
 }

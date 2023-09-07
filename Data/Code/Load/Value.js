@@ -1,6 +1,6 @@
 canvas = document.getElementById(`canvas`); //  /
                                             //  |
-canvas.width = 720//screen.width;                // /
+canvas.width = screen.width;                // /
 canvas.height = screen.height;              // \  Set Canvas
                                             //  |
 const ctx = canvas.getContext(`2d`);        //  \
