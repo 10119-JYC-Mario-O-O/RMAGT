@@ -6,7 +6,7 @@ function JumpInstruction () {
     }
     
     if (j && !isHaveJumped) {
-        PlayerMoveY = -80;
+        PlayerMoveY = -70;
 
         isHaveJumped = true;
         isOnGround = false;
