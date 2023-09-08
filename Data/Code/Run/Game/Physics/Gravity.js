@@ -12,7 +12,7 @@ function JumpInstruction () {
         isOnGround = false;
     }
 
-    PlayerMoveY += PlayerGravity - Math.abs(PlayerMoveX);
+    PlayerMoveY += PlayerGravity;
 
     if (PlayerMoveY >= 70) {
         PlayerMoveY = 70;
