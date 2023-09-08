@@ -18,5 +18,5 @@ function JumpInstruction () {
         PlayerMoveY = 70;
     }
     
-    PlayerY += Mult_MPS(PlayerMoveY / 16 * 8);
+    PlayerY += PlayerMoveY / 16 * 8;
 }

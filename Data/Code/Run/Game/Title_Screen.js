@@ -21,8 +21,8 @@ function Fade_Out (x, y) {
 
     JumpInstruction();
 
-    if (PlayerY >= canvas.height - PlayerHeight) {
-        PlayerY = canvas.height - PlayerHeight;
+    if (PlayerY >= 1440 - PlayerHeight) {
+        PlayerY = 1440 - PlayerHeight;
         
         isOnGround = true;
 
@@ -43,5 +43,5 @@ function Mult_MPS (num) {
 }
 
 function drawImage (img, ix, iy, iw, ih, cx, cy, cw, ch) {
-    ctx.drawImage(img, ix, iy, iw, ih, cx + X_SDP, cy + Y_SDP, Mult_MPS(cw), Mult_MPS(ch));
+    ctx.drawImage(img, ix, iy, iw, ih, Mult_MPS(cx) + X_SDP, Mult_MPS(cy) + Y_SDP, Mult_MPS(cw), Mult_MPS(ch));
 }
