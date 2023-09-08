@@ -1,7 +1,7 @@
 canvas = document.getElementById(`canvas`); //  /
                                             //  |
-canvas.width = screen.availWidth;                // /
-canvas.height = screen.availHeight;              // \  Set Canvas
+canvas.width = screen.availWidth;           // /
+canvas.height = screen.availHeight;         // \  Set Canvas
                                             //  |
 const ctx = canvas.getContext(`2d`);        //  \
 
