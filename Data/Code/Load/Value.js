@@ -31,3 +31,4 @@ let PlayerX = 0, PlayerY = 0, PlayerMoveX = 0, PlayerMoveY = 0;
 let PlayerHeight = 64, PlayerWidth = 64;
 let isOnGround = false, isHaveJumped = false;
 let NormalGravity = 6, JumpGravity = 3, PlayerGravity = 6;
+let isCrouching = false;
