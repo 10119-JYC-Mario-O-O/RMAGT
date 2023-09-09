@@ -30,7 +30,7 @@ let Seleted_Game_Theme = -1;    // -1 >= ERROR, 0 = Main, 1 = 3D etc
 let PlayerX = 0, PlayerY = 0, PlayerMoveX = 0, PlayerMoveY = 0, PSpeed = 0;
 let PlayerHeight = 64, PlayerWidth = 64;
 let isOnGround = false, isHaveJumped = false, isCrouching = false, isRunning = false;
-let NormalGravity = 6, JumpGravity = 3, PlayerGravity = 6;
-let PlayerMovingSpeed = 0.5, PlayerReInertia = 0.5;
+let NormalGravity = 6, JumpGravity = 4, PlayerGravity = 4;
+let PlayerMovingSpeed = 0.5, PlayerReInertia = 1.05, PlayerMaxSpeed = 7.5;
 
 // the block size will be 80px * 80px

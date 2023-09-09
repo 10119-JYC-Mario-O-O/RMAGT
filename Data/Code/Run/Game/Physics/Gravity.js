@@ -6,7 +6,7 @@ function JumpInstruction () {
     }
     
     if (j && !isHaveJumped) {
-        PlayerMoveY = -70;
+        PlayerMoveY = -75;
 
         isHaveJumped = true;
         isOnGround = false;
@@ -14,8 +14,8 @@ function JumpInstruction () {
 
     PlayerMoveY += PlayerGravity;
 
-    if (PlayerMoveY >= 70) {
-        PlayerMoveY = 70;
+    if (PlayerMoveY >= 75) {
+        PlayerMoveY = 75;
     }
     
     PlayerY += PlayerMoveY / 16 * 8;

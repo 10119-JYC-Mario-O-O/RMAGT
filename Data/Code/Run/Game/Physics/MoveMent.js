@@ -14,25 +14,29 @@ function MoveInstruction () {
     if (d) {
         PlayerMoveX += PlayerMovingSpeed;
 
-        if (isCrouching) {
-            PlayerMoveX -= PlayerMovingSpeed / 2;
+        if (PlayerMoveX >= PlayerMaxSpeed) {
+            PlayerMoveX = PlayerMaxSpeed;
         }
 
-        if (isRunning) {
-            PlayerMoveX += PlayerMovingSpeed / 2;
+        if (isCrouching) {
+            PlayerMoveX -= PlayerMovingSpeed * Math.abs(PlayerMoveX) / 5;
+        } else if (isRunning) {
+            PlayerMoveX += PlayerMovingSpeed * Math.abs(PlayerMoveX);
         }
     } else if (a) {
         PlayerMoveX -= PlayerMovingSpeed;
 
-        if (isCrouching) {
-            PlayerMoveX += PlayerMovingSpeed / 2;
+        if (PlayerMoveX <= -PlayerMaxSpeed) {
+            PlayerMoveX = -PlayerMaxSpeed;
         }
-
-        if (isRunning) {
-            PlayerMoveX -= PlayerMovingSpeed / 2;
+        
+        if (isCrouching) {
+            PlayerMoveX += PlayerMovingSpeed * Math.abs(PlayerMoveX) / 5;
+        } else if (isRunning) {
+            PlayerMoveX -= PlayerMovingSpeed * Math.abs(PlayerMoveX);
         }
     } else if (PlayerMoveX != 0) {
-        PlayerMoveX > 0 ? PlayerMoveX -= PlayerReInertia : PlayerMoveX += PlayerReInertia;
+        PlayerMoveX /= PlayerReInertia;
     }
 
     PlayerX += PlayerMoveX;
