@@ -31,6 +31,6 @@ let PlayerX = 0, PlayerY = 0, PlayerMoveX = 0, PlayerMoveY = 0, PSpeed = 0;
 let PlayerHeight = 64, PlayerWidth = 64;
 let isOnGround = false, isHaveJumped = false, isCrouching = false, isRunning = false;
 let NormalGravity = 6, JumpGravity = 3, PlayerGravity = 6;
-let PlayerMovingSpeed = 1, PlayerReInertia = 0.5;
+let PlayerMovingSpeed = 0.5, PlayerReInertia = 0.5;
 
 // the block size will be 80px * 80px
