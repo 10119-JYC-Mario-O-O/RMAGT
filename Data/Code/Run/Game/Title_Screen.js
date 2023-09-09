@@ -19,6 +19,7 @@ function Title_Screen () {
 function Fade_Out (x, y) {
     drawImage(Test, 0, 0, 2560, 1440, x, y, 2560, 1440);
 
+    MoveInstruction();
     JumpInstruction();
 
     if (PlayerY >= 1440 - PlayerHeight) {
