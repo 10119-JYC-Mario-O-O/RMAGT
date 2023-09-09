@@ -20,3 +20,13 @@ function JumpInstruction () {
     
     PlayerY += PlayerMoveY / 16 * 8;
 }
+
+function MoveInstruction () {
+    if (a) {
+        // move to the left
+    }
+
+    if (d) {
+        // move to the right
+    }
+}
