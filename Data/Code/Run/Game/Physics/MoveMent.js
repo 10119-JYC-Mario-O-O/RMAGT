@@ -1,6 +1,6 @@
 function MoveInstruction () {
     if (a) {
-        // move to the left
+        PlyaerMoveX++;
     }
 
     if (s) {
@@ -12,4 +12,6 @@ function MoveInstruction () {
     if (d) {
         // move to the right
     }
+
+    PlayerX += PlayerMoveX;
 }
