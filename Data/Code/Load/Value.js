@@ -1,7 +1,7 @@
 canvas = document.getElementById(`canvas`); //  /
                                             //  |
-canvas.width = screen.availWidth;           // /
-canvas.height = screen.availHeight;         // \  Set Canvas
+canvas.width = screen.width;           // /
+canvas.height = screen.height;         // \  Set Canvas
                                             //  |
 const ctx = canvas.getContext(`2d`);        //  \
 
@@ -27,8 +27,8 @@ let Title_UI_Code_Num = 0;   // 0 = Fade Out, 1 = Fade In, 2 = Title etc
 
 let Seleted_Game_Theme = -1;    // -1 >= ERROR, 0 = Main, 1 = 3D etc
 
-let PlayerX = 0, PlayerY = 0, PlayerMoveX = 0, PlayerMoveY = 0, PSpeed = 0;
+let PlayerX = 160, PlayerY = 160, PlayerMoveX = 0, PlayerMoveY = 0, PSpeed = 0;
 let PlayerHeight = 64, PlayerWidth = 64;
-let isOnGround = false, isHaveJumped = false;
-let NormalGravity = 6, JumpGravity = 3, PlayerGravity = 6;
-let isCrouching = false;
+let isOnGround = false, isHaveJumped = false, isCrouching = false, isRunning = false;
+let NormalGravity = 6, JumpGravity = 4, PlayerGravity = 4;
+let PlayerMovingSpeed = 0.5, PlayerReInertia = 1.05, PlayerMaxSpeed = 7.5;

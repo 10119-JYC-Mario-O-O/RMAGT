@@ -1,12 +1,14 @@
 function JumpInstruction () {
     if (j) {
         PlayerGravity = JumpGravity;
+    } else if (l) {
+        PlayerGravity = JumpGravity * 1.25;
     } else {
         PlayerGravity = NormalGravity;
     }
     
-    if (j && !isHaveJumped) {
-        PlayerMoveY = -70;
+    if ((j || l) && !isHaveJumped) {
+        PlayerMoveY = -75;
 
         isHaveJumped = true;
         isOnGround = false;
@@ -14,25 +16,9 @@ function JumpInstruction () {
 
     PlayerMoveY += PlayerGravity;
 
-    if (PlayerMoveY >= 70) {
-        PlayerMoveY = 70;
+    if (PlayerMoveY >= 75) {
+        PlayerMoveY = 75;
     }
     
     PlayerY += PlayerMoveY / 16 * 8;
-}
-
-function MoveInstruction () {
-    if (a) {
-        // move to the left
-    }
-
-    if (s) {
-        isCrouching = true;
-    } else {
-        isCrouching = false;
-    }
-
-    if (d) {
-        // move to the right
-    }
 }

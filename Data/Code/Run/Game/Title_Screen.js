@@ -19,14 +19,16 @@ function Title_Screen () {
 function Fade_Out (x, y) {
     drawImage(Test, 0, 0, 2560, 1440, x, y, 2560, 1440);
 
+    renderLevel();
+    MoveInstruction();
     JumpInstruction();
 
-    if (PlayerY >= 1440 - PlayerHeight) {
-        PlayerY = 1440 - PlayerHeight;
+    if (PlayerY >= 1440 - PlayerHeight - 40) {
+        PlayerY = 1440 - PlayerHeight - 40;
         
         isOnGround = true;
 
-        if (!j) {
+        if (!(j || l)) {
             isHaveJumped = false;
         }
     }
