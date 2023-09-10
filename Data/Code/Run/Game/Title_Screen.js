@@ -23,12 +23,12 @@ function Fade_Out (x, y) {
     MoveInstruction();
     JumpInstruction();
 
-    if (PlayerY >= 1440 - PlayerHeight - 80) {
-        PlayerY = 1440 - PlayerHeight - 80;
+    if (PlayerY >= 1440 - PlayerHeight - 40) {
+        PlayerY = 1440 - PlayerHeight - 40;
         
         isOnGround = true;
 
-        if (!j) {
+        if (!(j || l)) {
             isHaveJumped = false;
         }
     }
