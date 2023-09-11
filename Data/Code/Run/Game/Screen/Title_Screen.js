@@ -35,7 +35,7 @@ function Fade_Out (x, y) {
     }
 
     drawImage(TestSpr, 0, 0, 1440, 1440, PlayerRealX, PlayerRealY, PlayerWidth, PlayerHeight);
-    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX, PlayerDrawY, PlayerWidth, PlayerHeight);
+    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX, PlayerRealY, PlayerWidth, PlayerHeight);
 }
 
 function Debug () {
