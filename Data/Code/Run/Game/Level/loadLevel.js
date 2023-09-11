@@ -1,5 +1,5 @@
 function LoadLevel (Theme, Level_Number) {
-    if (Theme == main) {
+    if (Theme == "Main") {
         if (Level_Number == 1) {
             loadedLevel_Width = Main_1_Width;
             loadedLevel_Height = Main_1_Height;

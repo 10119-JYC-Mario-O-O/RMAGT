@@ -9,11 +9,17 @@ function renderLevel () {
 }
 
 function setScreenScroll () {
-    if (PlayerRealX < 2560 - PlayerWidth / 2) {
+    if (PlayerRealX <= 0) {
+        PlayerRealX = 0;
+    } else if (PlayerRealX >= loadedLevel_Width * 80 - PlayerWidth) {
+        PlayerRealX = loadedLevel_Width * 80 - PlayerWidth;
+    }
+    
+    if (PlayerRealX < 1280 - PlayerWidth / 2) {
         PlayerDrawX = PlayerRealX;
-    } else if (PlayerRealX > loadedLevel_Width - 2560 + PlayerWidth / 2) {
-        PlayerDrawX = PlayerRealX - loadedLevel_Width + 2560 - PlayerWidth / 2;
+    } else if (PlayerRealX > loadedLevel_Width * 80 - 1280 - PlayerWidth / 2) {
+        PlayerDrawX = PlayerRealX - loadedLevel_Width * 80 + 2560 - PlayerWidth / 2
     } else {
-        PlayerDrawX = 2560 - PlayerWidth / 2;
+        PlayerDrawX = 1280 - PlayerWidth / 2;
     }
 }
