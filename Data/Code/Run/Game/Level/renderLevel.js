@@ -18,7 +18,7 @@ function setScreenScroll () {
     if (PlayerRealX < 1280 - PlayerWidth / 2) {
         PlayerDrawX = PlayerRealX;
     } else if (PlayerRealX > loadedLevel_Width * 80 - 1280 - PlayerWidth / 2) {
-        PlayerDrawX = PlayerRealX - loadedLevel_Width * 80 + 2560 - PlayerWidth / 2
+        PlayerDrawX = PlayerRealX - loadedLevel_Width * 80 + 2560;
     } else {
         PlayerDrawX = 1280 - PlayerWidth / 2;
     }
