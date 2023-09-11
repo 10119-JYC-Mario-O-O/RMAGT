@@ -19,12 +19,13 @@ function Title_Screen () {
 function Fade_Out (x, y) {
     drawImage(Test, 0, 0, 2560, 1440, x, y, 2560, 1440);
 
+    setScreenScroll();
     renderLevel();
     MoveInstruction();
     JumpInstruction();
 
-    if (PlayerY >= 1440 - PlayerHeight - 40) {
-        PlayerY = 1440 - PlayerHeight - 40;
+    if (PlayerRealY >= 1440 - PlayerHeight - 40) {
+        PlayerRealY = 1440 - PlayerHeight - 40;
         
         isOnGround = true;
 
@@ -33,7 +34,7 @@ function Fade_Out (x, y) {
         }
     }
 
-    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerX, PlayerY, PlayerWidth, PlayerHeight);
+    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerRealX, PlayerRealY, PlayerWidth, PlayerHeight);
 }
 
 function Debug () {
