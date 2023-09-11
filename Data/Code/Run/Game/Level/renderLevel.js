@@ -9,5 +9,7 @@ function renderLevel () {
 }
 
 function setScreenScroll () {
-    
+    if (PlayerRealX < 2560 - PlayerWidth / 2) {
+        PlayerDrawX = PlayerRealX;
+    } else if (PlayerRealX > )
 }
