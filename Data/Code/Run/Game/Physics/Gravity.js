@@ -20,5 +20,5 @@ function JumpInstruction () {
         PlayerMoveY = 75;
     }
     
-    PlayerY += PlayerMoveY / 16 * 8;
+    PlayerRealY += PlayerMoveY / 16 * 8;
 }
