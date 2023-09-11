@@ -39,5 +39,5 @@ function MoveInstruction () {
         PlayerMoveX /= PlayerReInertia;
     }
 
-    PlayerX += PlayerMoveX;
+    PlayerRealX += PlayerMoveX;
 }
