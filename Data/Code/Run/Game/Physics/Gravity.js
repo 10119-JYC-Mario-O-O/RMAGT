@@ -1,4 +1,8 @@
 function JumpInstruction () {
+    if (!(j || l) && isOnGround) {
+        isHaveJumped = false;
+    }
+    
     if (j) {
         PlayerGravity = JumpGravity;
     } else if (l) {

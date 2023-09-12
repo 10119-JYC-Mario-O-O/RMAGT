@@ -29,13 +29,11 @@ function Fade_Out (x, y) {
         
         isOnGround = true;
 
-        if (!(j || l)) {
-            isHaveJumped = false;
-        }
+        
     }
 
     drawImage(TestSpr, 0, 0, 1440, 1440, PlayerRealX, PlayerRealY, PlayerWidth, PlayerHeight);
-    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX, PlayerRealY, PlayerWidth, PlayerHeight);
+    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX, PlayerDrawY, PlayerWidth, PlayerHeight);
 }
 
 function Debug () {
