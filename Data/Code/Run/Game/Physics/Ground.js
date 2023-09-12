@@ -8,8 +8,8 @@ function GroundDetection () {
     drawImage(TestGround, 0, 0, 1440, 1440, Math.floor(PBGX) * 80, Math.floor(PBGY) * 80, 80, 80);
     drawImage(TestGround, 0, 0, 1440, 1440, Math.floor(PBGSideX) * 80, Math.floor(PBGSideY) * 80, 80, 80);
     
-    if (AllBlockedGround.includes(loadedLevel[Math.floor(PBGX) + Math.floor(PBGSideY) * 80 + 80]) || 
-        AllBlockedGround.includes(loadedLevel[Math.floor(PBGSideX) + Math.floor(PBGSideY) * 80 + 80])) {
+    if (AllBlockedGround.includes(loadedLevel[Math.floor(PBGX) + Math.floor(PBGSideY) * loadedLevel_Width]) || 
+        AllBlockedGround.includes(loadedLevel[Math.floor(PBGSideX) + Math.floor(PBGSideY) * loadedLevel_Width])) {
         isOnGround = true;
         Debug();
     }
