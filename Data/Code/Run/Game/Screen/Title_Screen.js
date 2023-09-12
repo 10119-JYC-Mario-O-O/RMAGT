@@ -24,16 +24,15 @@ function Fade_Out (x, y) {
     MoveInstruction();
     JumpInstruction();
 
-    if (PlayerRealY >= 1440 - PlayerHeight - 40) {
-        PlayerRealY = 1440 - PlayerHeight - 40;
+    if (PlayerRealY >= 1440 - PlayerHeight - 80) {
+        PlayerRealY = 1440 - PlayerHeight - 80;
         
         isOnGround = true;
-
-        
     }
 
-    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerRealX, PlayerRealY, PlayerWidth, PlayerHeight);
-    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX, PlayerDrawY, PlayerWidth, PlayerHeight);
+    GroundDetection();
+
+    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX, PlayerRealY, PlayerWidth, PlayerHeight);
 }
 
 function Debug () {
