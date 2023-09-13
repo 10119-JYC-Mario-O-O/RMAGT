@@ -32,11 +32,9 @@ function GroundDetection () {
     }
 
     // Bonkable_Ceiling
-    if (Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
-        Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
-        isOnGround = true;
-
-        PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
+    if (Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
+        Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) {
+        PlayerMoveY = 0;
     }
 
     // Standable Ground
