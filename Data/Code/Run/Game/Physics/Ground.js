@@ -11,8 +11,8 @@ function GroundDetection () {
         // drawImage(TestGround, 0, 0, 1440, 1440, PBGX * 80, PBGY * 80, 80, 80);
         // drawImage(TestGround, 0, 0, 1440, 1440, PBGSideX * 80, PBGSideY * 80, 80, 80);
         if (DebugMod) {
-            drawImage(TestSpr, 0, 0, 1440, 1440, PBGX * 80, PBGSideY * 80, 80, 80);
-            drawImage(TestSpr, 0, 0, 1440, 1440, PBGSideX * 80, PBGSideY * 80, 80, 80);
+            drawImage(TestSpr, 0, 0, 1440, 1440, PBGX * 80, PBGY * 80, 80, 80);
+            drawImage(TestSpr, 0, 0, 1440, 1440, PBGSideX * 80, PBGY * 80, 80, 80);
         }
     
     // Left Wall
