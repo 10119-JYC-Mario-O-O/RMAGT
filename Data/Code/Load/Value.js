@@ -32,3 +32,5 @@ let PlayerHeight = 64, PlayerWidth = 64;
 let isOnGround = false, isHaveJumped = false, isCrouching = false, isRunning = false;
 let NormalGravity = 6, JumpGravity = 4, PlayerGravity = 4;
 let PlayerMovingSpeed = 0.5, PlayerReInertia = 1.05, PlayerMaxSpeed = 7.5;
+
+let DebugMod = true;

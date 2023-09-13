@@ -36,6 +36,8 @@ function loadKeyboardListener() {
     document.addEventListener('keyup', function (event) {
         if (event.keyCode == 13) {
             enterKey = false;
+
+            DebugMod = !DebugMod;
         }
 
         if (event.keyCode == 65) {
