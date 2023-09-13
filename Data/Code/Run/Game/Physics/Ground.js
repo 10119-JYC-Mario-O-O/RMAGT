@@ -1,4 +1,7 @@
-let AllBlockedGround = [0x01];
+let Left_Wall = [0x01], 
+    Right_Wall = [0x01], 
+    Bonkable_Ceiling = [0x01], 
+    Standable_Ground = [0x01];
 
 //PBG = PlayerBackGround
 function GroundDetection () {                                      
@@ -12,8 +15,33 @@ function GroundDetection () {
             drawImage(TestSpr, 0, 0, 1440, 1440, PBGSideX * 80, PBGSideY * 80, 80, 80);
         }
     
-    if (AllBlockedGround.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
-        AllBlockedGround.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
+    // Left Wall
+    if (Left_Wall.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
+        Left_Wall.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
+        isOnGround = true;
+
+        PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
+    }
+
+    // Right Wall
+    if (Right_Wall.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
+        Right_Wall.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
+        isOnGround = true;
+
+        PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
+    }
+
+    // Bonkable_Ceiling
+    if (Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
+        Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
+        isOnGround = true;
+
+        PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
+    }
+
+    // Standable Ground
+    if (Standable_Ground.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
+        Standable_Ground.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
         isOnGround = true;
 
         PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
