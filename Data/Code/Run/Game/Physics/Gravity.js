@@ -1,5 +1,5 @@
 function JumpInstruction () {
-    if (!(j || l) && isOnGround) {
+    if (!(j || l) && isOnGround && !isBonked) {
         isHaveJumped = false;
     }
     
