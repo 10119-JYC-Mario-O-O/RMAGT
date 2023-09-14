@@ -11,9 +11,8 @@ function GroundDetection () {
     // Left Wall
     if (Left_Wall.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
         Left_Wall.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
+        PlayerMoveX = 0;
         isOnGround = true;
-
-        PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
     }
 
     // Right Wall
@@ -25,8 +24,9 @@ function GroundDetection () {
     }
 
     // Bonkable_Ceiling
-    if (Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
-        Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) {
+    if ((Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
+        Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) && 
+        PlayerMoveY < 0) {
         PlayerRealY = PBGSideY * 80;
         isBonked = true;
     }
