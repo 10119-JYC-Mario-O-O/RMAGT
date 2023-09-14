@@ -32,8 +32,9 @@ function GroundDetection () {
     }
 
     // Standable Ground
-    if (Standable_Ground.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
-        Standable_Ground.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
+    if ((Standable_Ground.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
+        Standable_Ground.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width]) && 
+        PlayerMoveY > 0)) {
         isOnGround = true;
 
         isBonked = false;
