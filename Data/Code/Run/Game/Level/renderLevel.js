@@ -22,4 +22,18 @@ function setScreenScroll () {
     } else {
         PlayerDrawX = 1280 - PlayerWidth / 2;
     }
+
+    if (PlayerRealY <= 0) {
+        PlayerRealY = 0;
+    } else if (PlayerRealY >= loadedLevel_Width * 80 - PlayerWidth) {
+        PlayerRealY = loadedLevel_Width * 80 - PlayerWidth;
+    }
+    
+    if (PlayerRealY < 720 - PlayerHeight / 2) {
+        PlayerDrawY = PlayerRealY;
+    } else if (PlayerRealY > loadedLevel_Height * 80 - 720 - PlayerHeight / 2) {
+        PlayerDrawY = PlayerRealY - loadedLevel_Height * 80 + 720;
+    } else {
+        PlayerDrawY = 720 - PlayerHeight / 2;
+    }
 }
