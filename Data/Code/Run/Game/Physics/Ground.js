@@ -27,7 +27,7 @@ function GroundDetection () {
     // Bonkable_Ceiling
     if (Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
         Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) {
-        PlayerMoveY = PlayerGravity;
+        PlayerRealY = PBGSideY * 80;
         isBonked = true;
     }
 
