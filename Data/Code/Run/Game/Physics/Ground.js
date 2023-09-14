@@ -26,18 +26,22 @@ function GroundDetection () {
     // Bonkable_Ceiling
     if ((Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
         Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) && 
-        true){//PlayerMoveY < 0) {
+        PlayerMoveY < 0) {
+        
         PlayerRealY = PBGSideY * 80;
         PlayerMoveY = 0;
+        
         isBonked = true;
     }
 
     // Standable Ground
     if ((Standable_Ground.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
         Standable_Ground.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) && 
-        true){//PlayerMoveY > 0) {
+        PlayerMoveY > 0) {
+        
         isOnGround = true;
-
+        PlayerMoveY = 0;
+        
         isBonked = false;
 
         PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
