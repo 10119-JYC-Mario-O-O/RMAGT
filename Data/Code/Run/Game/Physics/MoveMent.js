@@ -38,6 +38,9 @@ function MoveInstruction () {
     } else if (PlayerMoveX != 0) {
         PlayerMoveX /= PlayerReInertia;
     }
+}
 
+function MoveThePlayer () {
     PlayerRealX += PlayerMoveX;
+    PlayerRealY += PlayerMoveY / 16 * 8;
 }
