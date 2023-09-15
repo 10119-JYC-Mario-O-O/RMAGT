@@ -8,36 +8,25 @@ function GroundDetection () {
         drawImage(TestSpr, 0, 0, 1440, 1440, PBGSideX * 80, PBGY * 80, 80, 80);
     }
     
-    // Left Wall
-    if (Left_Wall.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
-        Left_Wall.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
+    // Left Wall : Right Wall
+    if (Left_Wall.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) && PlayerMoveX <= 0) {
         PlayerMoveX = 0;
-        isOnGround = true;
+    } else if (Right_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && PlayerMoveX >= 0) {
+        PlayerMoveX = 0;
     }
 
-    // Right Wall
-    if (Right_Wall.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
-        Right_Wall.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) {
-        isOnGround = true;
-
-        PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
-    }
-
-    // Bonkable_Ceiling
+    // Bonkable_Ceiling : Standable Ground
     if ((Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
         Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) && 
-        PlayerMoveY < 0) {
+        PlayerMoveY <= 0) {
         
         PlayerRealY = PBGSideY * 80;
         PlayerMoveY = 0;
         
         isBonked = true;
-    }
-
-    // Standable Ground
-    if ((Standable_Ground.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
+    } else if ((Standable_Ground.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
         Standable_Ground.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) && 
-        PlayerMoveY > 0) {
+        PlayerMoveY >= 0) {
         
         isOnGround = true;
         PlayerMoveY = 0;
