@@ -23,4 +23,6 @@ function JumpInstruction () {
     if (PlayerMoveY >= 75) {
         PlayerMoveY = 75;
     }
+
+    PlayerRealY += PlayerMoveY / 16 * 8;
 }
