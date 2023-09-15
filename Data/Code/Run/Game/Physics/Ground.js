@@ -8,7 +8,7 @@ function GroundDetection () {
         drawImage(TestSpr, 0, 0, 1440, 1440, PBGSideX * 80, PBGY * 80, 80, 80);
     }
 
-    // Bonkable_Ceiling : Standable Ground : Left Wall : Right Wall
+    // Bonkable_Ceiling : Standable Ground
     if ((Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
         Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) && 
         PlayerMoveY <= 0) {
@@ -27,7 +27,10 @@ function GroundDetection () {
         isBonked = false;
 
         PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
-    } else if (Left_Wall.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) && PlayerMoveX <= 0) {
+    }
+    
+    // Left Wall : Right Wall
+    if (Left_Wall.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) && PlayerMoveX <= 0) {
         PlayerRealX = PBGX * 80 + 80;
         PlayerRealX -= PlayerMoveX;
         PlayerMoveX = 0;
