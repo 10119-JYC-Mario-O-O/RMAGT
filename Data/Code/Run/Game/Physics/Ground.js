@@ -10,9 +10,11 @@ function GroundDetection () {
     
     // Left Wall : Right Wall
     if (Left_Wall.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) && PlayerMoveX <= 0) {
+        PlayerRealX -= PlayerMoveX;
         PlayerMoveX = 0;
         PlayerRealX = PBGX * 80 + 80;
     } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && PlayerMoveX >= 0) {
+        PlayerRealX -= PlayerMoveX;
         PlayerMoveX = 0;
         PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth);
     }
