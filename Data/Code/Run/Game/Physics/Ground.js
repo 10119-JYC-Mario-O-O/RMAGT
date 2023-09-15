@@ -14,7 +14,7 @@ function GroundDetection () {
         PlayerRealX = PBGX * 80 + 80;
     } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && PlayerMoveX >= 0) {
         PlayerMoveX = 0;
-        // PlayerRealX = PBGX * 80 + 80;
+        PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth);
     }
 
     // Bonkable_Ceiling : Standable Ground
