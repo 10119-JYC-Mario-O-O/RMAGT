@@ -7,6 +7,15 @@ function GroundDetection () {
         drawImage(TestSpr, 0, 0, 1440, 1440, PBGX * 80, PBGY * 80, 80, 80);
         drawImage(TestSpr, 0, 0, 1440, 1440, PBGSideX * 80, PBGY * 80, 80, 80);
     }
+    
+    // Left Wall : Right Wall
+    if (Left_Wall.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) && PlayerMoveX <= 0) {
+        PlayerMoveX = 0;
+        PlayerRealX = PBGX * 80 + 80;
+    } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && PlayerMoveX >= 0) {
+        PlayerMoveX = 0;
+        // PlayerRealX = PBGX * 80 + 80;
+    }
 
     // Bonkable_Ceiling : Standable Ground
     if ((Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
@@ -27,22 +36,5 @@ function GroundDetection () {
         isBonked = false;
 
         PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
-    }
-
-    if (!isOnGround) {
-        // Left Wall : Right Wall
-        if ((Left_Wall.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
-            Left_Wall.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width])) && 
-            PlayerMoveX <= 0) {
-
-            PlayerMoveX = 0;
-            PlayerRealX = PBGX * 80 + 80;
-        } else if ((Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) || 
-            Left_Wall.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) && 
-            PlayerMoveX >= 0) {
-
-            PlayerMoveX = 0;
-            PlayerRealX = PBGX * 80 + 80;
-        }
     }
 }
