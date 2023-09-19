@@ -1,6 +1,6 @@
 //PBG = PlayerBackGround
 function GroundDetection () {
-    let PBGX = Math.floor(PlayerRealX / 80), PBGY = Math.floor(PlayerRealY / 80),
+    let PBGX = Math.floor((PlayerRealX) / 80), PBGY = Math.floor(PlayerRealY / 80),
         PBGSideX = Math.floor((PlayerRealX + PlayerWidth) / 80), PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);
 
     if (DebugMod) {

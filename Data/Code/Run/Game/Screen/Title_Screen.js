@@ -22,8 +22,8 @@ function Fade_Out (x, y) {
     setScreenScroll();
     renderLevel();
     MoveInstruction();
-    JumpInstruction();
     GroundDetection();
+    JumpInstruction();
 
     drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX, PlayerRealY, PlayerWidth, PlayerHeight);
 }
