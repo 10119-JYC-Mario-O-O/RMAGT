@@ -1,7 +1,7 @@
 //PBG = PlayerBackGround
 function GroundDetection () {
-    let PBGX = Math.floor((PlayerRealX + 16) / 80), PBGY = Math.floor(PlayerRealY / 80),
-        PBGSideX = Math.floor((PlayerRealX + PlayerWidth - 16) / 80), PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);
+    let PBGX = Math.floor(PlayerRealX / 80), PBGY = Math.floor(PlayerRealY / 80),
+        PBGSideX = Math.floor((PlayerRealX + PlayerWidth) / 80), PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);
 
     if (DebugMod) {
         drawImage(TestSpr, 0, 0, 1440, 1440, PBGX * 80, PBGY * 80, 80, 80);
@@ -29,9 +29,9 @@ function GroundDetection () {
         }
     }
 
-    PBGX = Math.floor(PlayerRealX / 80);
+    PBGX = Math.floor((PlayerRealX + 16) / 80);
     PBGY = Math.floor(PlayerRealY / 80);
-    PBGSideX = Math.floor((PlayerRealX + PlayerWidth - 1) / 80);
+    PBGSideX = Math.floor((PlayerRealX + PlayerWidth - 16) / 80);
     PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);
 
     // Bonkable_Ceiling : Standable Ground
