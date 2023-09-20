@@ -36,6 +36,6 @@ let PlayerMovingSpeed = 0.5, PlayerReInertia = 1.1, PlayerMaxSpeed = 7.5;
 let Left_Wall = [0x01], 
     Right_Wall = [0x01], 
     Bonkable_Ceiling = [0x01], 
-    Standable_Ground = [0x01];
+    Standable_Ground = [0x01, 0x02];
 
 let DebugMod = false;

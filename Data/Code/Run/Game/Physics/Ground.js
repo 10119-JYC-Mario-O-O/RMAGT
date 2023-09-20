@@ -18,20 +18,20 @@ function GroundDetection () {
 
     if (!isBonked) {
         // Left Wall : Right Wall
-        if (Left_Wall.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) && PlayerMoveX <= 0) {
+        if (Left_Wall.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) && !d) {
             PlayerRealX = PBGX * 80 + 80;
             PlayerMoveX = 0;
             hasTouchedWall = true;
-        } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && PlayerMoveX >= 0) {
+        } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && !a) {
             PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth);
             PlayerMoveX = 0;
             hasTouchedWall = true;
         }
     }
 
-    PBGX = Math.floor((PlayerRealX + 16) / 80);
+    PBGX = Math.floor((PlayerRealX) / 80);
     PBGY = Math.floor(PlayerRealY / 80);
-    PBGSideX = Math.floor((PlayerRealX + PlayerWidth - 16) / 80);
+    PBGSideX = Math.floor((PlayerRealX + PlayerWidth) / 80);
     PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);
 
     // Bonkable_Ceiling : Standable Ground

@@ -4,13 +4,11 @@ function loadKeyboardListener() {
             enterKey = true;
         }
 
-        if (event.keyCode == 65) {
-            a = true;
-        }
-
         if (event.keyCode == 68) {
             d = true;
-        }
+        } else if (event.keyCode == 65) {
+            a = true;
+        }        
 
         if (event.keyCode == 74) {
             j = true;
@@ -40,12 +38,10 @@ function loadKeyboardListener() {
             DebugMod = !DebugMod;
         }
 
-        if (event.keyCode == 65) {
-            a = false;
-        }
-
         if (event.keyCode == 68) {
             d = false;
+        } else if (event.keyCode == 65) {
+            a = false;
         }
 
         if (event.keyCode == 74) {
