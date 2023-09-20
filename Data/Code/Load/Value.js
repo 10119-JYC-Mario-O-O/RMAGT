@@ -30,7 +30,7 @@ let Seleted_Game_Theme = -1;    // -1 >= ERROR, 0 = Main, 1 = 3D etc
 let PlayerRealX = 80, PlayerRealY = 80, PlayerDrawX = 80, PlayerDrawY = 80, PlayerMoveX = 0, PlayerMoveY = 0, PSpeed = 0;
 let PlayerHeight = 64, PlayerWidth = 64;
 let isOnGround = false, isHaveJumped = false, isCrouching = false, isRunning = false, isBonked = true;
-let NormalGravity = 6, JumpGravity = 4, PlayerGravity = 4;
+let NormalGravity = 6, JumpGravity = 4, PlayerGravity = 6;
 let PlayerMovingSpeed = 0.5, PlayerReInertia = 1.1, PlayerMaxSpeed = 7.5;
 
 let Left_Wall = [0x01], 
