@@ -36,7 +36,7 @@ function setScreenScroll () {
     if (PlayerRealY < 720 - PlayerHeight / 2) {
         PlayerDrawY = PlayerRealY;
     } else if (PlayerRealY > loadedLevel_Height * 80 - 720 - PlayerHeight / 2) {
-        PlayerDrawY = loadedLevel_Height * 80 - PlayerRealY + 720;
+        PlayerDrawY = PlayerRealY - loadedLevel_Height * 80 + 720 + PlayerHeight / 2;
     } else {
         PlayerDrawY = 720 - PlayerHeight / 2;
     }
