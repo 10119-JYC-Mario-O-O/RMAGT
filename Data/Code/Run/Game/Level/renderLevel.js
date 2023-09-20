@@ -4,6 +4,10 @@ function renderLevel () {
             if (loadedLevel[j + i * loadedLevel_Width] == 0x01) {
                 drawImage(TestGround, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 - PlayerDrawY + PlayerRealY, 80, 80);
             }
+
+            if (loadedLevel[j + i * loadedLevel_Width] == 0x02) {
+                drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 - PlayerDrawY + PlayerRealY, 80, 80);
+            }
         }
     }
 }
