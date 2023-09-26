@@ -39,5 +39,8 @@ function MoveInstruction () {
         PlayerMoveX /= PlayerReInertia;
     }
 
-    PlayerRealX += PlayerMoveX;
+    for (let i = 0; i < 10; i++) {
+        PlayerRealX += PlayerMoveX / 10;
+        WallDetection();
+    }
 }
