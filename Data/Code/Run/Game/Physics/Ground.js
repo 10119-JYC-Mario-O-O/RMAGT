@@ -24,12 +24,20 @@ function WallDetection () {
             PlayerRealX = PBGX * 80 + 80;
             PlayerMoveX = 0;
             hasTouchedWall = true;
-        } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && !a) {
+
+            return true;
+        }
+        
+        if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && !a) {
             PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth);
             PlayerMoveX = 0;
             hasTouchedWall = true;
+
+            return true;
         }
     }
+
+    return false;
 }
 
 function GroundDetection () {
