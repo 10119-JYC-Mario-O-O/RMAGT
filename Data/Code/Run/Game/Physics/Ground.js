@@ -2,12 +2,14 @@
 function WallDetection () {
     let PBGX = Math.floor((PlayerRealX) / 80), 
         PBGY = Math.floor((PlayerRealY) / 80),
-        PBGSideX = Math.floor((PlayerRealX + PlayerWidth) / 80), 
-        PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);
+        PBGSideX = Math.round((PlayerRealX + PlayerWidth) / 80), 
+        PBGSideY = Math.round((PlayerRealY + PlayerHeight) / 80);
+
+    let hasTouchedWall = false;
 
     if (DebugMod) {
-        drawImage(TestSpr, 0, 0, 1440, 1440, PBGX * 80, PBGY * 80, 80, 80);
-        drawImage(TestSpr, 0, 0, 1440, 1440, PBGSideX * 80, PBGY * 80, 80, 80);
+        drawImage(TestSpr, 0, 0, 1440, 1440, Math.floor((PlayerDrawX) / 80) * 80, Math.round((PlayerDrawY) / 80) * 80, 80, 80);
+        drawImage(TestSpr, 0, 0, 1440, 1440, Math.floor((PlayerDrawX + PlayerWidth) / 80) * 80, Math.round((PlayerDrawY) / 80) * 80, 80, 80);
     }
 
     // set isBonked
@@ -24,20 +26,14 @@ function WallDetection () {
             PlayerRealX = PBGX * 80 + 80;
             PlayerMoveX = 0;
             hasTouchedWall = true;
-
-            return true;
-        }
-        
-        if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && !a) {
+        } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && !a) {
             PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth);
             PlayerMoveX = 0;
             hasTouchedWall = true;
-
-            return true;
         }
     }
 
-    return false;
+    return hasTouchedWall;
 }
 
 function GroundDetection () {
