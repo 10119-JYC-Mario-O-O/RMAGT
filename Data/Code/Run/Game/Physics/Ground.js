@@ -1,24 +1,26 @@
 //PBG = PlayerBackGround
 function WallDetection () {
     let PBGX = Math.floor((PlayerRealX) / 80), 
-        PBGY = Math.round((PlayerRealY) / 80),
+        PBGY = Math.floor((PlayerRealY) / 80),
         PBGSideX = Math.floor((PlayerRealX + PlayerWidth) / 80), 
-        PBGSideY = Math.round((PlayerRealY + PlayerHeight) / 80);
+        PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);
 
     let hasTouchedWall = false;
 
     if (DebugMod) {
-        drawImage(TestSpr, 0, 0, 1440, 1440, Math.floor((PlayerDrawX) / 80) * 80, Math.round((PlayerDrawY) / 80) * 80, 80, 80);
-        drawImage(TestSpr, 0, 0, 1440, 1440, Math.floor((PlayerDrawX + PlayerWidth) / 80) * 80, Math.round((PlayerDrawY) / 80) * 80, 80, 80);
+        drawImage(R, 0, 0, 1440, 1440, Math.floor((PlayerRealX) / 80) * 80, Math.floor((PlayerRealY) / 80) * 80, 80, 80);
+        drawImage(O, 0, 0, 1440, 1440, Math.floor((PlayerRealX + PlayerWidth) / 80) * 80, Math.floor((PlayerRealY) / 80) * 80, 80, 80);
+        drawImage(Y, 0, 0, 1440, 1440, Math.floor((PlayerRealX) / 80) * 80, Math.floor((PlayerRealY + PlayerHeight) / 80) * 80, 80, 80);
+        drawImage(G, 0, 0, 1440, 1440, Math.floor((PlayerRealX + PlayerWidth) / 80) * 80, Math.floor((PlayerRealY + PlayerHeight) / 80) * 80, 80, 80);
     }
 
     // set isBonked
-    if ((Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
-        Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) && 
-        PlayerMoveY <= 0) {
+    // if ((Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
+    //     Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) && 
+    //     PlayerMoveY <= 0) {
         
-        isBonked = true;
-    }
+    //     isBonked = true;
+    // }
 
     if (!isBonked) {
         // Left Wall : Right Wall
@@ -27,7 +29,7 @@ function WallDetection () {
             PlayerMoveX = 0;
             hasTouchedWall = true;
         } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && !a) {
-            PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth);
+            PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth) - 1;
             PlayerMoveX = 0;
             hasTouchedWall = true;
         }

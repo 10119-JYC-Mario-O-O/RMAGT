@@ -43,7 +43,10 @@ function MoveInstruction () {
         PlayerRealX += PlayerMoveX / 10;
         
         if (WallDetection()) {
+            console.log(true);
             break;
         }
+
+        console.log(false);
     }
 }
