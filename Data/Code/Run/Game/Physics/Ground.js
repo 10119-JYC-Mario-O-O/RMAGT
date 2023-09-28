@@ -1,8 +1,8 @@
 //PBG = PlayerBackGround
 function WallDetection () {
     let PBGX = Math.floor((PlayerRealX) / 80), 
-        PBGY = Math.floor((PlayerRealY) / 80),
-        PBGSideX = Math.round((PlayerRealX + PlayerWidth) / 80), 
+        PBGY = Math.round((PlayerRealY) / 80),
+        PBGSideX = Math.floor((PlayerRealX + PlayerWidth) / 80), 
         PBGSideY = Math.round((PlayerRealY + PlayerHeight) / 80);
 
     let hasTouchedWall = false;
