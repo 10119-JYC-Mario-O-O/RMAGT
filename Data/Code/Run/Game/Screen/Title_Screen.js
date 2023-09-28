@@ -25,7 +25,7 @@ function Fade_Out (x, y) {
     JumpInstruction();
     GroundDetection();
 
-    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX, PlayerRealY, PlayerWidth, PlayerHeight);
+    drawImage(TestSpr, 0, 0, 1440, 1440, PlayerDrawX, PlayerDrawY, PlayerWidth, PlayerHeight);
 }
 
 function Debug () {
