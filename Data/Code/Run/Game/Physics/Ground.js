@@ -29,7 +29,7 @@ function WallDetection () {
             PlayerMoveX = 0;
             hasTouchedWall = true;
         } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width]) && !a) {
-            PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth) - 1;
+            PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth);
             PlayerMoveX = 0;
             hasTouchedWall = true;
         }
@@ -39,9 +39,9 @@ function WallDetection () {
 }
 
 function GroundDetection () {
-    let PBGX = Math.floor((PlayerRealX) / 80), 
+    let PBGX = Math.floor((PlayerRealX + 1) / 80), 
         PBGY = Math.floor((PlayerRealY) / 80), 
-        PBGSideX = Math.floor((PlayerRealX + PlayerWidth) / 80), 
+        PBGSideX = Math.floor((PlayerRealX + PlayerWidth - 1) / 80), 
         PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);
 
     // Bonkable_Ceiling : Standable Ground
