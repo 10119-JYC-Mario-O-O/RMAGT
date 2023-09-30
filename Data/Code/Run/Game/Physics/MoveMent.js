@@ -27,23 +27,21 @@ function MoveInstruction () {
                 PlayerMoveX = PlayerMaxSpeed;
             }
         }
-
-        if (isCrouching) {
-            PlayerMoveX -= PlayerMovingSpeed * Math.abs(PlayerMoveX) / 5;
-        } else if (isRunning) {
-            PlayerMoveX += PlayerMovingSpeed * Math.abs(PlayerMoveX);
-        }
     } else if (a) {
         PlayerMoveX -= PlayerMovingSpeed;
 
-        if (PlayerMoveX <= -PlayerMaxSpeed) {
-            PlayerMoveX = -PlayerMaxSpeed;
-        }
-        
         if (isCrouching) {
-            PlayerMoveX += PlayerMovingSpeed * Math.abs(PlayerMoveX) / 5;
+            if (PlayerMoveX <= -PlayerMaxSpeed) {
+                PlayerMoveX = -PlayerMaxSpeed;
+            }
         } else if (isRunning) {
-            PlayerMoveX -= PlayerMovingSpeed * Math.abs(PlayerMoveX);
+            if (PlayerMoveX <= -PlayerMaxSpeed) {
+                PlayerMoveX = -PlayerMaxSpeed;
+            }
+        } else {
+            if (PlayerMoveX <= -PlayerMaxSpeed) {
+                PlayerMoveX = -PlayerMaxSpeed;
+            }
         }
     } else if (PlayerMoveX != 0) {
         PlayerMoveX /= PlayerReInertia;
