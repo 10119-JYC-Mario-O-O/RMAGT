@@ -14,8 +14,14 @@ function MoveInstruction () {
     if (d) {
         PlayerMoveX += PlayerMovingSpeed;
 
-        if (PlayerMoveX >= PlayerMaxSpeed) {
-            PlayerMoveX = PlayerMaxSpeed;
+        if (isCrouching) {
+            if (PlayerMoveX >= PlayerMaxSpeed) {
+                PlayerMoveX = PlayerMaxSpeed;
+            }
+        } else if (isRunning) {
+            
+        } else {
+            
         }
 
         if (isCrouching) {
