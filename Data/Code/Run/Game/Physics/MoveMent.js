@@ -19,9 +19,13 @@ function MoveInstruction () {
                 PlayerMoveX = PlayerMaxSpeed;
             }
         } else if (isRunning) {
-            
+            if (PlayerMoveX >= PlayerMaxSpeed) {
+                PlayerMoveX = PlayerMaxSpeed;
+            }
         } else {
-            
+            if (PlayerMoveX >= PlayerMaxSpeed) {
+                PlayerMoveX = PlayerMaxSpeed;
+            }
         }
 
         if (isCrouching) {
