@@ -39,7 +39,7 @@ function WallDetection () {
 }
 
 function GroundDetection () {
-    let PBGX = Math.floor((PlayerRealX + 1) / 80), 
+    let PBGX = Math.floor((PlayerRealX + 0) / 80), 
         PBGY = Math.floor((PlayerRealY) / 80), 
         PBGSideX = Math.floor((PlayerRealX + PlayerWidth - 1) / 80), 
         PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);

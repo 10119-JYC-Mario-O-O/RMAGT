@@ -47,8 +47,8 @@ function MoveInstruction () {
         PlayerMoveX /= PlayerReInertia;
     }
 
-    for (let i = 0; i < 10; i++) {
-        PlayerRealX += PlayerMoveX / 10;
+    for (let i = 0; i < 100; i++) {
+        PlayerRealX += PlayerMoveX / 100;
         
         if (WallDetection()) {
             break;
