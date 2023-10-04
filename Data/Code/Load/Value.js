@@ -31,7 +31,7 @@ let PlayerRealX = 80, PlayerRealY = 80, PlayerDrawX = 80, PlayerDrawY = 80, Play
 let PlayerHeight = 64, PlayerWidth = 64;
 let isOnGround = false, isHaveJumped = false, isCrouching = false, isRunning = false, isBonked = true;
 let NormalGravity = 6, JumpGravity = 4, PlayerGravity = 6;
-let PlayerMovingSpeed = 0.5, PlayerReInertia = 1.1, PlayerMaxSpeed = 7.5;
+let PlayerMovingSpeed = 0.5, PlayerReInertia = 1.15, PlayerMaxSpeed = 7.5;
 
 let Left_Wall = [0x01], 
     Right_Wall = [0x01], 
