@@ -14,14 +14,6 @@ function WallDetection () {
         drawImage(G, 0, 0, 1440, 1440, Math.floor((PlayerRealX + PlayerWidth) / 80) * 80, Math.floor((PlayerRealY + PlayerHeight) / 80) * 80, 80, 80);
     }
 
-    // set isBonked
-    // if ((Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
-    //     Bonkable_Ceiling.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) && 
-    //     PlayerMoveY <= 0) {
-        
-    //     isBonked = true;
-    // }
-
     if (!isBonked) {
         // Left Wall : Right Wall
         if (Left_Wall.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width])) {
