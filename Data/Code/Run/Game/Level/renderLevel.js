@@ -8,6 +8,18 @@ function renderLevel () {
             if (loadedLevel[j + i * loadedLevel_Width] == 0x02) {
                 drawImage(P, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
             }
+
+            if (loadedLevel[j + i * loadedLevel_Width] == 0x03) {
+                drawImage(G, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+            }
+
+            if (loadedLevel[j + i * loadedLevel_Width] == 0x04) {
+                drawImage(Y, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+            }
+
+            if (loadedLevel[j + i * loadedLevel_Width] == 0x05) {
+                drawImage(O, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+            }
         }
     }
 }

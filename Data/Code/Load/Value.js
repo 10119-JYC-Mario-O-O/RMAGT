@@ -33,9 +33,9 @@ let isOnGround = false, isHaveJumped = false, isCrouching = false, isRunning = f
 let NormalGravity = 6, JumpGravity = 4, PlayerGravity = 6;
 let PlayerMovingSpeed = 0.5, PlayerReInertia = 1.15, PlayerMaxSpeed = 7.5;
 
-let Left_Wall = [0x01], 
-    Right_Wall = [0x01], 
-    Bonkable_Ceiling = [0x01], 
+let Left_Wall = [0x01, 0x05], 
+    Right_Wall = [0x01, 0x04], 
+    Bonkable_Ceiling = [0x01, 0x03], 
     Standable_Ground = [0x01, 0x02];
 
 let DebugMod = false;
