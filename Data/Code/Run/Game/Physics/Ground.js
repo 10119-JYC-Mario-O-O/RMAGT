@@ -20,7 +20,7 @@ function WallDetection () {
             PlayerRealX = PBGX * 80 + 80;
             PlayerMoveX = 0;
             hasTouchedWall = true;
-        } else if (Left_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) {
+        } else if (Right_Wall.includes(loadedLevel[PBGSideX + PBGY * loadedLevel_Width])) {
             PlayerRealX = (PBGSideX * 80 - 80) + (80 - PlayerWidth);
             PlayerMoveX = 0;
             hasTouchedWall = true;
