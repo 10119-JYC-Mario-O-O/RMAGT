@@ -44,6 +44,8 @@ function GroundDetection () {
         
             PlayerRealY = PBGSideY * 80;
             PlayerMoveY = 0;
+
+            isBonked = true;
         } else if ((Standable_Ground.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
             Standable_Ground.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) && 
             PlayerMoveY >= 0) {
@@ -52,6 +54,8 @@ function GroundDetection () {
             PlayerMoveY = 0;
 
             PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
+
+            isBonked = false;
         }
     }
 }
