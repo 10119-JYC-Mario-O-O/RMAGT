@@ -36,6 +36,8 @@ function GroundDetection () {
         PBGSideX = Math.floor((PlayerRealX + PlayerWidth - 1) / 80), 
         PBGSideY = Math.floor((PlayerRealY + PlayerHeight) / 80);
 
+    let hasTouchedGround = false;
+
     if (Math.round((PlayerRealY) / 80) != PBGSideY) {
         // Bonkable_Ceiling : Standable Ground
         if ((Bonkable_Ceiling.includes(loadedLevel[PBGX + PBGY * loadedLevel_Width]) || 
@@ -46,6 +48,7 @@ function GroundDetection () {
             PlayerMoveY = 0;
         
             isBonked = true;
+            hasTouchedGround = true;
         } else if ((Standable_Ground.includes(loadedLevel[PBGX + PBGSideY * loadedLevel_Width]) || 
             Standable_Ground.includes(loadedLevel[PBGSideX + PBGSideY * loadedLevel_Width])) && 
             PlayerMoveY >= 0) {
@@ -56,6 +59,9 @@ function GroundDetection () {
             isBonked = false;
 
             PlayerRealY = (PBGSideY * 80 - 80) + (80 - PlayerHeight);
+            hasTouchedGround = true;
         }
     }
+
+    return hasTouchedGround;
 }

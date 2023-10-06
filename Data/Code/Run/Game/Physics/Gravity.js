@@ -24,5 +24,11 @@ function JumpInstruction () {
         PlayerMoveY = 75;
     }
 
-    PlayerRealY += PlayerMoveY / 16 * 8;
+    for (let i = 0; i < 100; i++) {
+        PlayerRealY += PlayerMoveY / 16 * 8 / 100;
+        
+        if (GroundDetection()) {
+            break;
+        }
+    }
 }
