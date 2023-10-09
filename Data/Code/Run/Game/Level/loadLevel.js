@@ -5,7 +5,7 @@ function LoadLevel (Theme, Level_Number) {
             loadedLevel_Height = Main_1_Height;
 
             loadedLevel = [...Main_1];
-            loadedLevel = [...Main_1_Text];
+            loadedText = [...Main_1_Text];
         }
 
         if (Level_Number == 2) {
@@ -13,7 +13,7 @@ function LoadLevel (Theme, Level_Number) {
             loadedLevel_Height = Main_2_Height;
 
             loadedLevel = [...Main_2];
-            loadedLevel = [...Main_2_Text];
+            loadedText = [...Main_2_Text];
         }
     }
 }
