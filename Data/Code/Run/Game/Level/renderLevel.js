@@ -27,7 +27,7 @@ function renderLevel () {
     // Render Text
     for (let i = 0; i < loadedLevel_Height; i++) {
         for (let j = 0; j < loadedLevel_Width; j++) {
-            if (loadedText[j + i * loadedText_Width] == " ") {
+            if (loadedText[j + i * loadedLevel_Width] == " ") {
                 drawImage(O, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
             }
         }
