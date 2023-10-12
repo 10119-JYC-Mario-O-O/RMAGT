@@ -1,4 +1,5 @@
 function loadPlayerImage () {
+    TextFont = new Image(), TextFont.src = 'Data/Image/TextFont.png';
     Test = new Image(), Test.src = 'Data/Image/Test.png';
     R = new Image(), R.src = 'Data/Image/R.png';
     O = new Image(), O.src = 'Data/Image/O.png';
