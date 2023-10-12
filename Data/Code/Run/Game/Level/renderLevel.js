@@ -64,106 +64,158 @@ function setScreenScroll () {
 
 function renderText(Text) {
     if (Text == "A") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 0, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "B") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 1, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "C") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 2, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "D") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 3, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "E") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 4, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "F") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 5, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "G") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 6, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "H") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 7, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "I") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 8, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "J") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 9, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "K") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 10, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "L") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 11, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "M") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 12, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "N") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 0, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "O") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 1, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "P") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 2, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "Q") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 3, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "R") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 4, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "S") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 5, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "T") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 6, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "U") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 7, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "V") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 8, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "W") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 9, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "X") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 10, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "Y") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 11, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 
     if (Text == "Z") {
-        drawImage(TextFont, 0, 0, 1440, 1440, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+        drawImage(TextFont, 80 * 12, 80 * 1, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "0") {
+        drawImage(TextFont, 80 * 0, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "1") {
+        drawImage(TextFont, 80 * 1, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "2") {
+        drawImage(TextFont, 80 * 2, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "3") {
+        drawImage(TextFont, 80 * 3, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "4") {
+        drawImage(TextFont, 80 * 4, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "5") {
+        drawImage(TextFont, 80 * 5, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "6") {
+        drawImage(TextFont, 80 * 6, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "7") {
+        drawImage(TextFont, 80 * 7, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "8") {
+        drawImage(TextFont, 80 * 8, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "9") {
+        drawImage(TextFont, 80 * 9, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == ".") {
+        drawImage(TextFont, 80 * 10, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "!") {
+        drawImage(TextFont, 80 * 11, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
+    }
+
+    if (Text == "-") {
+        drawImage(TextFont, 80 * 12, 80 * 2, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
 }
