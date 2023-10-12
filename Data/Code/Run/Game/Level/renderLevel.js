@@ -27,7 +27,7 @@ function renderLevel () {
     // Render Text
     for (let i = 0; i < loadedLevel_Height; i++) {
         for (let j = 0; j < loadedLevel_Width; j++) {
-            renderText(loadedText[j + i * loadedLevel_Width]);
+            renderText(loadedText[j + i * loadedLevel_Width], j, i);
         }
     }
 }
@@ -62,7 +62,7 @@ function setScreenScroll () {
     }
 }
 
-function renderText(Text) {
+function renderText(Text, j, i) {
     if (Text == "A") {
         drawImage(TextFont, 80 * 0, 80 * 0, 80, 80, PlayerDrawX - PlayerRealX + j * 80, i * 80 + PlayerDrawY - PlayerRealY, 80, 80);
     }
