@@ -6,6 +6,8 @@ function LoadLevel (Theme, Level_Number) {
 
             loadedLevel = [...Main_1];
             loadedText = [...Main_1_Text];
+            
+            TextColor = Main_1_TextColor;
         }
 
         if (Level_Number == 2) {
@@ -14,6 +16,8 @@ function LoadLevel (Theme, Level_Number) {
 
             loadedLevel = [...Main_2];
             loadedText = [...Main_2_Text];
+
+            TextColor = Main_2_TextColor;
         }
     }
 }
