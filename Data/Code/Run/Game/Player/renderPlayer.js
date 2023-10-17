@@ -1,3 +1,3 @@
 function renderPlayer() {
-    PlayeriAnimationFrame += Math.abs();
+    PlayerAnimationFrame += Math.abs(PlayerMoveX) * 8 / 15 - 1;
 }

@@ -1,30 +1,12 @@
 function MoveInstruction () {
-    if (s) {
-        isCrouching = true;
-    } else {
-        isCrouching = false;
-    }
-
-    if (k) {
-        isRunning = true;
-    } else {
-        isRunning = false;
-    }
-
-    if (w) {
-        isLookingUp = true;
-    } else {
-        isLookingUp = false;
-    }
-    
     if (d) {
         PlayerMoveX += PlayerMovingSpeed;
 
-        if (isCrouching) {
+        if (s) {
             if (PlayerMoveX >= PlayerMaxSpeed * 0.5) {
                 PlayerMoveX = PlayerMaxSpeed * 0.5;
             }
-        } else if (isRunning) {
+        } else if (k) {
             if (PlayerMoveX >= PlayerMaxSpeed * 1.5) {
                 PlayerMoveX = PlayerMaxSpeed * 1.5;
             }
@@ -36,11 +18,11 @@ function MoveInstruction () {
     } else if (a) {
         PlayerMoveX -= PlayerMovingSpeed;
 
-        if (isCrouching) {
+        if (s) {
             if (PlayerMoveX <= -PlayerMaxSpeed * 0.5) {
                 PlayerMoveX = -PlayerMaxSpeed * 0.5;
             }
-        } else if (isRunning) {
+        } else if (k) {
             if (PlayerMoveX <= -PlayerMaxSpeed * 1.5) {
                 PlayerMoveX = -PlayerMaxSpeed * 1.5;
             }
