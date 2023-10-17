@@ -10,6 +10,12 @@ function MoveInstruction () {
     } else {
         isRunning = false;
     }
+
+    if (w) {
+        isLookingUp = true;
+    } else {
+        isLookingUp = false;
+    }
     
     if (d) {
         PlayerMoveX += PlayerMovingSpeed;
