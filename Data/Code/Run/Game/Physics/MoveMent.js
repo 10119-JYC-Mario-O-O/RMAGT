@@ -1,4 +1,12 @@
 function MoveInstruction () {
+    if (w) {
+        PlayerHeight = 80;
+    } else if (s) {
+        PlayerHeight = 48;
+    } else {
+        PlayerHeight = 64;
+    }
+
     if (d) {
         PlayerMoveX += PlayerMovingSpeed;
 
