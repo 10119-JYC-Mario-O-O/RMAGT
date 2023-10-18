@@ -1,10 +1,18 @@
 function MoveInstruction () {
     if (w) {
-        PlayerHeight = 80;
+        if (PlayerHeight < 80) {
+            PlayerHeight += 4;
+        }
     } else if (s) {
-        PlayerHeight = 48;
+        if (PlayerHeight > 48) {
+            PlayerHeight -= 4;
+        }
     } else {
-        PlayerHeight = 64;
+        if (PlayerHeight > 64) {
+            PlayerHeight -= 4;
+        } else  if (PlayerHeight < 64) {
+            PlayerHeight += 4;
+        }
     }
 
     if (d) {
