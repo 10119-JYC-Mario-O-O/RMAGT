@@ -14,5 +14,5 @@ function renderPlayer() {
     let C = Math.floor(PlayerAnimationFrame) - A * 100 - B * 10;
     loadedText[35] = C;
 
-    drawImage(PlayerImage, 0, 0, 256, 256, PlayerDrawX, PlayerDrawY, PlayerWidth, PlayerHeight);
+    drawImage(PlayerImage, 0, 56, 40, 64, PlayerDrawX, PlayerDrawY, PlayerWidth, PlayerHeight);
 }
