@@ -2,7 +2,7 @@ function MoveInstruction () {
     if (w) {
         if (PlayerWidth < 80) {
             PlayerWidth += 4;
-            PlayerRealX -= 4;
+            PlayerRealX -= 2;
         }
 
         if (PlayerHeight < 80) {
@@ -12,7 +12,7 @@ function MoveInstruction () {
     } else if (s) {
         if (PlayerWidth > 48) {
             PlayerWidth -= 4;
-            PlayerRealX += 4;
+            PlayerRealX += 2;
         }
         
         if (PlayerHeight > 48) {
@@ -22,10 +22,10 @@ function MoveInstruction () {
     } else {
         if (PlayerWidth > 64) {
             PlayerWidth -= 4;
-            PlayerRealX += 4;
+            PlayerRealX += 2;
         } else  if (PlayerWidth < 64) {
             PlayerWidth += 4;
-            PlayerRealX -= 4;
+            PlayerRealX -= 2;
         }
         
         if (PlayerHeight > 64) {
