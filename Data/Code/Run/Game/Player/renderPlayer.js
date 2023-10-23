@@ -14,5 +14,5 @@ function renderPlayer() {
     let C = Math.floor(PlayerAnimationFrame) - A * 100 - B * 10;
     loadedText[35] = C;
 
-    drawImage(PlayerImage, PlayerAnimationState * 80, PowerUpState * 80 + 80 - 80 * (s && !w) + 80 * (w), PlayerWidth, PlayerHeight, PlayerDrawX, PlayerDrawY, PlayerWidth, PlayerHeight);
+    drawImage(PlayerImage, PlayerAnimationState * 80, PowerUpState * 80 * 3 + 80 - 80 * (s && !w) + 80 * (w), PlayerWidth, PlayerHeight, PlayerDrawX, PlayerDrawY, PlayerWidth, PlayerHeight);
 }
