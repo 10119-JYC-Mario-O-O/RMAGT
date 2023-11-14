@@ -1,5 +1,5 @@
 function renderPlayer() {
-    PlayerAnimationFrame += Math.abs(PlayerMoveX) * 8 - 10;
+    PlayerAnimationFrame += Math.abs(PlayerMoveX) * 2 - 1;
     
     if (PlayerAnimationFrame <= 0) {
         PlayerAnimationFrame = 0;
@@ -18,7 +18,7 @@ function renderPlayer() {
 
     drawImage(PlayerImage, 
               PlayerAnimationState * 80 + PlayerAnimationState * 8, PowerUpState * 88 * 3 + 88 - 88 * (s && !w) + 88* (w), 
-              PlayerWidth * (Math.floor(PlayerWidth / 16) == PlayerWidth / 16) + 80 * (Math.floor(PlayerWidth / 16) != PlayerWidth / 16), 
+              PlayerWidth * (Math.floor(PlayerWidth / 16) == PlayerWidth / 16) + 80 * (Math.floor(PlayerWidth / 16) != PlayerWidth / 16) + 80 * PlayerSpriteSheetLeftX * (!PlayerFacingRight), 
               PlayerHeight * (Math.floor(PlayerHeight / 16) == PlayerHeight / 16) + 80 * (Math.floor(PlayerHeight / 16) != PlayerHeight / 16), 
               PlayerDrawX,PlayerDrawY, 
               PlayerWidth, PlayerHeight);

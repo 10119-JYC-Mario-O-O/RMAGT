@@ -28,7 +28,9 @@ let Title_UI_Code_Num = 0;   // 0 = Fade Out, 1 = Fade In, 2 = Title etc
 let Seleted_Game_Theme = -1;    // -1 >= ERROR, 0 = Main, 1 = 3D etc
 
 let PlayerRealX = 80, PlayerRealY = 80, PlayerDrawX = 80, PlayerDrawY = 80, PlayerMoveX = 0, PlayerMoveY = 0;
-let PlayerHeight = 64, PlayerWidth = 40, PowerUpState = 1, PlayerAnimationFrame = 0, PlayerAnimationState = 0;
+let PlayerHeight = 64, PlayerWidth = 40, PowerUpState = 1;
+let PlayerSpriteSheetLeftX = 6;
+let PlayerAnimationFrame = 0, PlayerAnimationState = 0, PlayerFacingRight = true;
 let isOnGround = false, isHaveJumped = false, isBonked = true;
 let NormalGravity = 6, JumpGravity = 4, PlayerGravity = 6;
 let PlayerMovingSpeed = 0.5, PlayerReInertia = 1.15, PlayerMaxSpeed = 7.5;
