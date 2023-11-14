@@ -8,7 +8,7 @@ function renderPlayer() {
     let A = Math.floor(PlayerAnimationFrame / 100);
     loadedText[33] = A;
     
-    let B = Math.floor(PlayerAnimationFrame / 10) - A * 10;3
+    let B = Math.floor(PlayerAnimationFrame / 10) - A * 10;
     loadedText[34] = B;
     
     let C = Math.floor(PlayerAnimationFrame) - A * 100 - B * 10;
