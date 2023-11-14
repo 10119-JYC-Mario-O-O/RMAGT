@@ -7,7 +7,7 @@ function MoveInstruction () {
 
         if (PlayerHeight < 80) {
             PlayerHeight += 4;
-            PlayerRealY -= 4;
+            PlayerRealY += 4;
         }
     } else if (s) {
         if (PlayerWidth > 48) {
@@ -17,7 +17,7 @@ function MoveInstruction () {
         
         if (PlayerHeight > 48) {
             PlayerHeight -= 4;
-            PlayerRealY += 4;
+            PlayerRealY -= 4;
         }
     } else {
         if (PlayerWidth > 64) {
@@ -39,12 +39,14 @@ function MoveInstruction () {
 
     if (d) {
         PlayerMoveX += PlayerMovingSpeed;
+        
+        PlayerFacingRight = true;
 
-        if (s) {
-            if (PlayerMoveX >= PlayerMaxSpeed * 0.5) {
-                PlayerMoveX = PlayerMaxSpeed * 0.5;
-            }
-        } else if (k) {
+        // if (s) {
+            // if (PlayerMoveX >= PlayerMaxSpeed * 0.5) {
+                // PlayerMoveX = PlayerMaxSpeed * 0.5;
+            // }
+        /* } else */if (k) {
             if (PlayerMoveX >= PlayerMaxSpeed * 1.5) {
                 PlayerMoveX = PlayerMaxSpeed * 1.5;
             }
@@ -56,11 +58,13 @@ function MoveInstruction () {
     } else if (a) {
         PlayerMoveX -= PlayerMovingSpeed;
 
-        if (s) {
-            if (PlayerMoveX <= -PlayerMaxSpeed * 0.5) {
-                PlayerMoveX = -PlayerMaxSpeed * 0.5;
-            }
-        } else if (k) {
+        PlayerFacingRight = false;
+
+        // if (s) {
+            // if (PlayerMoveX <= -PlayerMaxSpeed * 0.5) {
+                // PlayerMoveX = -PlayerMaxSpeed * 0.5;
+            // }
+        /* } else */if (k) {
             if (PlayerMoveX <= -PlayerMaxSpeed * 1.5) {
                 PlayerMoveX = -PlayerMaxSpeed * 1.5;
             }
