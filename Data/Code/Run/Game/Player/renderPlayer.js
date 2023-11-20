@@ -5,23 +5,14 @@ function renderPlayer() {
         if (PlayerAnimationFrame <= PlayerRNG * -60) {
             PlayerAnimationState = 1;
 
-            if (PlayerRNG * -60 - 60 <= PlayerAnimationFrame) {
+            if (PlayerRNG * -60 - 60 > PlayerAnimationFrame) {
                 PlayerAnimationFrame = 0;
-                PlayerRNG = Math.random() * (5 - 3) + 3;
+                PlayerRNG = Math.random() * (60 - 30) + 30;
             }
         } else {
             PlayerAnimationState = 0;
         }
     }
-
-    let A = Math.floor(PlayerAnimationFrame / 100);
-    loadedText[33] = A;
-    
-    let B = Math.floor(PlayerAnimationFrame / 10) - A * 10;
-    loadedText[34] = B;
-    
-    let C = Math.floor(PlayerAnimationFrame) - A * 100 - B * 10;
-    loadedText[35] = C;
 
     if (PlayerAnimationFrame >= 60) {
         PlayerAnimationState++;
