@@ -2,11 +2,13 @@ function renderPlayer() {
     PlayerAnimationFrame += Math.abs(PlayerMoveX) * 2 - 1;
     
     if (Math.abs(PlayerMoveX) * 2 - 1 < 0) {
-        if (PlayerRNG * -60 - 60 <= PlayerAnimationFrame && PlayerAnimationFrame <= PlayerRNG * -60) {
+        if (PlayerAnimationFrame <= PlayerRNG * -60) {
             PlayerAnimationState = 1;
+        } else if (PlayerRNG * -60 - 60 <= PlayerAnimationFrame) {
+            PlayerAnimationFrame = 0;
+            PlayerRNG = Math.random() * (5 - 3) + 3;
         } else {
             PlayerAnimationState = 0;
-            PlayerRNG = Math.random() * (5 - 3) + 3;
         }
     }
 
