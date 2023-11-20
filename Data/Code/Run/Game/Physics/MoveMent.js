@@ -38,6 +38,10 @@ function MoveInstruction () {
     }
 
     if (d) {
+        if (PlayerAnimationFrame < 0) {
+            PlayerAnimationFrame = 0;
+        }
+
         PlayerMoveX += PlayerMovingSpeed;
         
         PlayerFacingRight = true;
@@ -56,6 +60,10 @@ function MoveInstruction () {
             }
         }
     } else if (a) {
+        if (PlayerAnimationFrame < 0) {
+            PlayerAnimationFrame = 0;
+        }
+        
         PlayerMoveX -= PlayerMovingSpeed;
 
         PlayerFacingRight = false;
