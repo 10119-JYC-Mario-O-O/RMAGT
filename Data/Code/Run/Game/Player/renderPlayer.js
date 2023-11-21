@@ -24,6 +24,10 @@ function renderPlayer() {
         }
     }
 
+    if (Math.floor(PlayerWidth / 16) != PlayerWidth / 16) {
+        PlayerAnimationState = PlayerSpriteSheetLeftX * 2;
+    }
+
     drawImage(PlayerImage, 
               PlayerAnimationState * 80 + PlayerAnimationState * 8 + 88 * PlayerSpriteSheetLeftX * (!PlayerFacingRight), PowerUpState * 88 * 3 + 88 - 88 * (s && !w) + 88* (w), 
               PlayerWidth * (Math.floor(PlayerWidth / 16) == PlayerWidth / 16) + 80 * (Math.floor(PlayerWidth / 16) != PlayerWidth / 16), 
