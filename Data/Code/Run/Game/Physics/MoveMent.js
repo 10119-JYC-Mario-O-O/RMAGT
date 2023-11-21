@@ -1,39 +1,39 @@
 function MoveInstruction () {
     if (w) {
         if (PlayerWidth < 80) {
-            PlayerWidth += 2;
-            PlayerRealX -= 1;
+            PlayerWidth += 1;
+            PlayerRealX -= 0.5;
         }
 
         if (PlayerHeight < 80) {
-            PlayerHeight += 2;
-            PlayerRealY += 2;
+            PlayerHeight += 1;
+            PlayerRealY += 1;
         }
     } else if (s) {
         if (PlayerWidth > 48) {
-            PlayerWidth -= 2;
-            PlayerRealX += 1;
+            PlayerWidth -= 1;
+            PlayerRealX += 0.5;
         }
         
         if (PlayerHeight > 48) {
-            PlayerHeight -= 2;
-            PlayerRealY -= 2;
+            PlayerHeight -= 1;
+            PlayerRealY -= 1;
         }
     } else {
         if (PlayerWidth > 64) {
-            PlayerWidth -= 2;
-            PlayerRealX += 1;
-        } else  if (PlayerWidth < 64) {
-            PlayerWidth += 2;
-            PlayerRealX -= 1;
+            PlayerWidth -= 1;
+            PlayerRealX += 0.5;
+        } else if (PlayerWidth < 64) {
+            PlayerWidth += 1;
+            PlayerRealX -= 0.5;
         }
         
         if (PlayerHeight > 64) {
-            PlayerHeight -= 2;
-            PlayerRealY += 2;
-        } else  if (PlayerHeight < 64) {
-            PlayerHeight += 2;
-            PlayerRealY -= 2;
+            PlayerHeight -= 1;
+            PlayerRealY += 1;
+        } else if (PlayerHeight < 64) {
+            PlayerHeight += 1;
+            PlayerRealY -= 1;
         }
     }
 
