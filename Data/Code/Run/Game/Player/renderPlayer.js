@@ -20,7 +20,7 @@ function renderPlayer() {
         PlayerAnimationFrame = 0;
 
         if (PlayerAnimationState <= PlayerAnimationSpriteX[1] || PlayerAnimationState >= PlayerAnimationSpriteX[2]) {
-            PlayerAnimationState = PlayerAnimationSpriteX[2];
+            PlayerAnimationState = PlayerAnimationSpriteX[1];
         }
     }
 
