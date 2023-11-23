@@ -19,17 +19,17 @@ function renderPlayer() {
 
         PlayerAnimationFrame = 0;
 
-        if (PlayerAnimationState <= PlayerAnimationSpriteX[2] || PlayerAnimationState >= PlayerAnimationSpriteX[3]) {
+        if (PlayerAnimationState <= PlayerAnimationSpriteX[1] || PlayerAnimationState >= PlayerAnimationSpriteX[2]) {
             PlayerAnimationState = PlayerAnimationSpriteX[2];
         }
     }
 
     if (Math.floor(PlayerWidth / 16) != PlayerWidth / 16) {
-        PlayerAnimationState = PlayerAnimationSpriteX[3] * 2;
+        PlayerAnimationState = PlayerAnimationSpriteX[2];
     }
 
     drawImage(PlayerImage, 
-              PlayerAnimationState * 80 + PlayerAnimationState * 8 + 88 * PlayerAnimationSpriteX[PlayerAnimationSpriteX.length] * (!PlayerFacingRight), PowerUpState * 88 * 3 + 88 - 88 * (s && !w) + 88* (w), 
+              PlayerAnimationState * 88 + 88 * PlayerAnimationSpriteX[3] * (!PlayerFacingRight), PowerUpState * 88 * 3 + 88 - 88 * (s && !w) + 88* (w), 
               PlayerWidth * (Math.floor(PlayerWidth / 16) == PlayerWidth / 16) + 80 * (Math.floor(PlayerWidth / 16) != PlayerWidth / 16), 
               PlayerHeight * (Math.floor(PlayerHeight / 16) == PlayerHeight / 16) + 80 * (Math.floor(PlayerHeight / 16) != PlayerHeight / 16), 
               PlayerDrawX,PlayerDrawY, 
