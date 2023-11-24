@@ -1,39 +1,33 @@
 function MoveInstruction () {
     if (w) {
-        if (PlayerWidth < 80) {
-            PlayerWidth += 2;
-            PlayerRealX -= 1;
-        }
-
-        if (PlayerHeight < 80) {
-            PlayerHeight += 2;
-            PlayerRealY += 2;
+        if (PlayerSizeState < 2) {
+            PlayerSizeState += 0.125;
         }
     } else if (s) {
-        if (PlayerWidth > 48) {
-            PlayerWidth -= 2;
-            PlayerRealX += 1;
-        }
-        
-        if (PlayerHeight > 48) {
-            PlayerHeight -= 2;
-            PlayerRealY -= 2;
+        if (PlayerSizeState > 0) {
+            PlayerSizeState -= 0.125;
         }
     } else {
-        if (PlayerWidth > 64) {
-            PlayerWidth -= 2;
-            PlayerRealX += 1;
-        } else if (PlayerWidth < 64) {
-            PlayerWidth += 2;
-            PlayerRealX -= 1;
+        if (PlayerSizeState < 1) {
+            PlayerSizeState += 0.125;
+        } else if (PlayerSizeState > 1) {
+            PlayerSizeState -= 0.125;
         }
-        
-        if (PlayerHeight > 64) {
-            PlayerHeight -= 2;
-            PlayerRealY += 2;
-        } else if (PlayerHeight < 64) {
-            PlayerHeight += 2;
-            PlayerRealY -= 2;
+    }
+    
+    if (PlayerSizeState != Math.floor(PlayerSizeState)) {
+        PlayerHeight = 80;
+        PlayerWidth = 80;
+    } else {
+        if (PlayerSizeState == 0) {
+            PlayerHeight = 48;
+            PlayerWidth = 48;
+        } else if (PlayerSizeState == 0) {
+            PlayerHeight = 64;
+            PlayerWidth = 64;
+        } else {
+            PlayerHeight = 80;
+            PlayerWidth = 80;
         }
     }
 
