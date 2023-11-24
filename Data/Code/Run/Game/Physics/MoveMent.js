@@ -22,7 +22,7 @@ function MoveInstruction () {
         if (PlayerSizeState == 0) {
             PlayerHeight = 48;
             PlayerWidth = 48;
-        } else if (PlayerSizeState == 0) {
+        } else if (PlayerSizeState == 1) {
             PlayerHeight = 64;
             PlayerWidth = 64;
         } else {
