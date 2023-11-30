@@ -1,21 +1,27 @@
 function MoveInstruction () {
     if (w) {
         if (PlayerSizeState < 2) {
-            PlayerSizeState += 0.125;
+            PlayerSizeState += 0.01;
         }
     } else if (s) {
         if (PlayerSizeState > 0) {
-            PlayerSizeState -= 0.125;
+            PlayerSizeState -= 0.01;
+            console.log(PlayerSizeState);
         }
     } else {
         if (PlayerSizeState < 1) {
-            PlayerSizeState += 0.125;
+            PlayerSizeState += 0.01;
         } else if (PlayerSizeState > 1) {
-            PlayerSizeState -= 0.125;
+            PlayerSizeState -= 0.01;
         }
     }
-    
-    if (PlayerSizeState != Math.floor(PlayerSizeState)) {
+
+    loadedText[0] = `${Math.floor(PlayerSizeState)}`;
+    loadedText[1] = `.`;
+    loadedText[2] = `${Math.floor(PlayerSizeState * 10) - Math.floor(PlayerSizeState) * 10}`;
+    loadedText[3] = `${Math.floor(PlayerSizeState * 100) - Math.floor(PlayerSizeState * 10) * 10}`;
+
+    if (!Number.isInteger(PlayerSizeState)) {
         PlayerHeight = 80;
         PlayerWidth = 80;
     } else {
