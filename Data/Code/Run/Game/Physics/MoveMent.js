@@ -1,40 +1,33 @@
 function MoveInstruction () {
     if (w) {
-        if (PlayerSizeState < 2) {
-            PlayerSizeState += 0.01;
+        if (PlayerSizeState < 200) {
+            PlayerSizeState += 1;
         }
     } else if (s) {
         if (PlayerSizeState > 0) {
-            PlayerSizeState -= 0.01;
-            console.log(PlayerSizeState);
+            PlayerSizeState -= 1;
         }
     } else {
-        if (PlayerSizeState < 1) {
-            PlayerSizeState += 0.01;
-        } else if (PlayerSizeState > 1) {
-            PlayerSizeState -= 0.01;
+        if (PlayerSizeState < 100) {
+            PlayerSizeState += 1;
+        } else if (PlayerSizeState > 100) {
+            PlayerSizeState -= 1;
         }
     }
 
-    loadedText[0] = `${Math.floor(PlayerSizeState)}`;
-    loadedText[1] = `.`;
-    loadedText[2] = `${Math.floor(PlayerSizeState * 10) - Math.floor(PlayerSizeState) * 10}`;
-    loadedText[3] = `${Math.floor(PlayerSizeState * 100) - Math.floor(PlayerSizeState * 10) * 10}`;
+    loadedText[2] = `${PlayerSizeState - Math.floor(PlayerSizeState / 10 - Math.floor(PlayerSizeState / 100) / 10) * 10 - Math.floor(PlayerSizeState / 100) * 100}`;
+    loadedText[1] = `${Math.floor(PlayerSizeState / 10 - Math.floor(PlayerSizeState / 100) / 10)}`;
+    loadedText[0] = `${Math.floor(PlayerSizeState / 100)}`;
 
-    if (!Number.isInteger(PlayerSizeState)) {
+    if (PlayerSizeState == 0) {
+        PlayerHeight = 48;
+        PlayerWidth = 48;
+    } else if (PlayerSizeState == 100) {
+        PlayerHeight = 64;
+        PlayerWidth = 64;
+    } else {
         PlayerHeight = 80;
         PlayerWidth = 80;
-    } else {
-        if (PlayerSizeState == 0) {
-            PlayerHeight = 48;
-            PlayerWidth = 48;
-        } else if (PlayerSizeState == 1) {
-            PlayerHeight = 64;
-            PlayerWidth = 64;
-        } else {
-            PlayerHeight = 80;
-            PlayerWidth = 80;
-        }
     }
 
     if (d) {

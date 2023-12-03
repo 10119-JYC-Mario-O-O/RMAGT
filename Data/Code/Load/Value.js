@@ -30,7 +30,7 @@ let Seleted_Game_Theme = -1;    // -1 >= ERROR, 0 = Main, 1 = 3D etc
 let PlayerRealX = 80, PlayerRealY = 80, PlayerDrawX = 80, PlayerDrawY = 80, PlayerMoveX = 0, PlayerMoveY = 0;
 let PlayerHeight = 64, PlayerWidth = 64, PowerUpState = 1;
 let PlayerAnimationSpriteX = [0, 2, 6, 9]; // [1] = Idle, [2] = Walking, [3] = smoke, [4] = End
-let PlayerFacingRight = true, PlayerSizeState = 1;
+let PlayerFacingRight = true, PlayerSizeState = 100;
 let PlayerAnimationFrame = 0, PlayerAnimationState = 0, PlayerRNG = Math.random() * (60 - 30) + 30;
 let isOnGround = false, isHaveJumped = false, isBonked = true;
 let NormalGravity = 6, JumpGravity = 4, PlayerGravity = 6;
