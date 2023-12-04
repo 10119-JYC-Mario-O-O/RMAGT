@@ -17,7 +17,7 @@ function MoveInstruction () {
 
     loadedText[0] = `${Math.floor(PlayerSizeState / 100)}`;
     loadedText[1] = `${Math.floor(PlayerSizeState / 10 - Math.floor(PlayerSizeState / 100) * 10)}`;
-    loadedText[2] = `${PlayerSizeState - Math.floor(PlayerSizeState / 10 - Math.floor(PlayerSizeState / 100) * 10T) * 10 - Math.floor(PlayerSizeState / 100) * 100}`;
+    loadedText[2] = `${PlayerSizeState - Math.floor(PlayerSizeState / 10 - Math.floor(PlayerSizeState / 100) * 10) * 10 - Math.floor(PlayerSizeState / 100) * 100}`;
 
     if (PlayerSizeState == 0) {
         PlayerHeight = 48;
