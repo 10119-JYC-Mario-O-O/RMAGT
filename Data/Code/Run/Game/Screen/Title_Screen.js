@@ -16,6 +16,8 @@ function Title_Screen () {
     }
 }
 
+loadLevel("Main", 1);
+
 function Fade_Out (x, y) {
     drawImage(Test, 0, 0, 2560, 1440, x, y, 2560, 1440);
 
